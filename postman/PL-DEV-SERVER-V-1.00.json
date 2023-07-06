@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "9145a284-1086-492e-897a-9eb567b7a4bc",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18336681"
+	},
+	"item": [
+		{
+			"name": "GET ALL RESPONSE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/questions",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST RESPONSE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"response\":\"SANJEET DUTT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/questions/:id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"questions",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
