@@ -1,0 +1,289 @@
+{
+	"eoiID": "123123",
+	"interviewID": "123",
+	"entityType": "Employee",
+	"dependent": [
+		{
+			"dependentEoiID": "12323",
+			"dependentInterviewID": "111",
+			"dependentRelationshipTypeCode": "Spouse",
+			"dependentEmail": "spouse@email.com"
+		}
+	],
+	"interviewStatus": {
+		"eConsent": true,
+		"hipaa": true,
+		"corrections": true,
+		"esignature": false, // is boolean enough, or we might need to track if he responded or not yet?
+		"status": "active", // active, approved, declined, pending
+		"currentStep": "" // eConsent | hipaa | corrections | dependent | enquiry | esignature
+	},
+	"corrections": {
+		// The information/fields that can be corrected by the user
+	},
+	"limra": {
+		"transmissionGUID": "78582b62-ca7c-4cd9-9a57-46abd2c2f679",
+		"senderName": "ADP",
+		"senderPlatformName": "ADP WorkForce Now",
+		"receiverName": "PacLife",
+		"creationDateTime": "2022-10-17T16:02:07.557-04:00",
+		"testProductionCode": "Test",
+		"transmissionTypeCode": "FullFile",
+		"schemaVersionIdentifier": "1.3.2022.01.01",
+
+		"employer": [
+			{
+				"employerPartyID": "defjam11",
+				"carrierMasterAgreementNumber": [
+					{
+						"masterAgreementNumber": "320098"
+					}
+				],
+				"employerName": "defjam11",
+				"employee": [
+					{
+						"employeePartyID": "71674:999",
+						"employeeSocialSecurityNumber": "123456897",
+						"employeeIdentifier": "1DJ203788",
+						"employeeName": {
+							"firstName": "Mary",
+							"lastName": "Jones"
+						},
+						"employeeGenderCode": "Female",
+						"employeeBirthDate": "1967-09-16",
+						"employeeHomePhone": "+14045683788",
+						"employeeWorkPhone": "+18165553788",
+						"employeeMailingAddress": {
+							"firstLineAddress": "5134 N Cumberland",
+							"cityName": "St. Louis",
+							"stateProvinceCode": "MO",
+							"postalCode": "63127",
+							"countryCode": "US"
+						},
+						"employeeEmail": "paromita.chatterjee@adp.com",
+						"employmentInformation": {
+							"originalHireDate": "1993-11-03",
+							"employmentTypeCode": "FullTime",
+							"employmentStatusCode": "Active",
+							"employmentIncome": [
+								{
+									"incomeTypeCode": "Salary",
+									"incomeAmount": 26297.024,
+									"incomeModeCode": "Annual",
+									"incomeEffectiveDate": "2014-12-31"
+								}
+							],
+							"employmentInformationUserDefinedCategory": []
+						},
+						"event": [
+							{
+								"eventID": "52682b62-ca7c-4cd9-9a57-46abd2c2f511",
+								"eventTypeCode": "Coverage",
+								"eventTypeReasonCode": "LateEntrant",
+								"eventDate": "2022-12-31",
+								"enrollmentInformationID": []
+							}
+						],
+						"employeeEventID": [],
+						"dependent": [
+							{
+								"dependentPartyID": "139463513046_1",
+								"dependentSocialSecurityNumber": "343358822",
+								"dependentName": {
+									"firstName": "Four",
+									"lastName": "Dime"
+								},
+								"dependentRelationshipTypeCode": "Spouse",
+								"dependentGenderCode": "Female",
+								"dependentBirthDate": "1979-08-01",
+								"dependentMailingAddress": {
+									"firstLineAddress": "3450 Farm to Market",
+									"cityName": "Houston",
+									"stateProvinceCode": "TX",
+									"postalCode": "77068",
+									"countryCode": "US"
+								},
+								"dependentEventID": []
+							}
+						],
+						"otherParty": [],
+						"beneficiaryGroup": [],
+						"producer": [],
+						"coverage": [
+							{
+								"coverageID": "20200539695145_1",
+								"groupPolicyNumber": "320098",
+								"productTypeCode": "Life",
+								"benefitPlanIdentifier": "Vol",
+								"benefitClassIdentifier": "001",
+								"originalCoverageEffectiveDate": "2021-01-01",
+								"coverageEffectiveDate": "2022-12-31",
+								"coverageTierCode": "Employee",
+								"benefitAmount": 0.0,
+								"benefitEarningsEffectiveDate": "2019-01-01",
+								"electedCoverage": {
+									"electedBenefitAmount": 65000.0,
+									"electedCoverageInsured": [
+										{
+											"insuredPartyID": "71674:999",
+											"primaryInsuredIndicator": true,
+											"insuredCoverageEffectiveDate": "2022-12-31"
+										}
+									],
+									"electedCoverageRider": []
+								},
+								"coverageInsured": [
+									{
+										"insuredPartyID": "71674:999",
+										"primaryInsuredIndicator": true,
+										"insuredCoverageEffectiveDate": "2022-12-31"
+									}
+								],
+								"coverageEventID": []
+							}
+						],
+						"employeeForm": []
+					}
+				]
+			}
+		]
+	},
+  "UME":{
+    "enquiryId": "f09d35d9-57a4-4857-a9ae-fd7cd6f31116",
+    "branch": "PLGroupBen",
+    "tag": "PL_WPB_v9",
+    "locale": "EN_US",
+    "availableLocales": ["EN_US"],
+    "effectiveDate": 1689033600000,
+    "isVoid": false,
+    "isSatisfied": false,
+    "isCloseable": false,
+    "isOpen": true,
+    "buckets": [],
+    "sections": [
+      {
+        "name": "Your Basic Details",
+        "isSatisfied": false,
+        "hasQuestions": true,
+        "enquiryLines": [
+          {
+            "name": "Your_Basic_Details",
+            "path": "Your_Basic_Details",
+            "alias": "Your Basic Details",
+            "section": "Your Basic Details",
+            "preamble": "Please tell us your basic quote information",
+            "rawSection": "Your Basic Details",
+            "rawPreamble": "Please tell us your basic quote information",
+            "isSatisfied": false,
+            "hasQuestions": true,
+            "isWrapUpLine": false,
+            "isGlobal": true,
+            "isRoot": true,
+            "isForced": false,
+            "tags": [],
+            "triggers": ["Your Basic Details"],
+            "triggerQuestions": {},
+            "questions": [
+              {
+                "name": "SOURCE",
+                "path": "SOURCE",
+                "locale": "EN_US",
+                "hasAnswer": false,
+                "isSatisfied": false,
+                "triggeredLines": [],
+                "answers": [],
+                "validationErrors": {}
+              },
+              {
+                "name": "GENDER",
+                "path": "GENDER",
+                "locale": "EN_US",
+                "hasAnswer": false,
+                "isSatisfied": false,
+                "triggeredLines": [],
+                "answers": [],
+                "validationErrors": {}
+              },
+              {
+                "name": "BIRTHDATE",
+                "path": "BIRTHDATE",
+                "locale": "EN_US",
+                "hasAnswer": false,
+                "isSatisfied": false,
+                "triggeredLines": [],
+                "answers": [],
+                "validationErrors": {}
+              },
+              {
+                "name": "MIB_PRESENT",
+                "path": "MIB_PRESENT",
+                "locale": "EN_US",
+                "hasAnswer": false,
+                "isSatisfied": false,
+                "triggeredLines": [],
+                "answers": [],
+                "validationErrors": {}
+              },
+              {
+                "name": "RX_PRESENT",
+                "path": "RX_PRESENT",
+                "locale": "EN_US",
+                "hasAnswer": false,
+                "isSatisfied": false,
+                "triggeredLines": [],
+                "answers": [],
+                "validationErrors": {}
+              }
+            ],
+            "buckets": [],
+            "staticallyTriggeredLines": []
+          }
+        ]
+      },
+      {
+        "isSatisfied": false,
+        "hasQuestions": true,
+        "enquiryLines": [
+          {
+            "name": "Non_Medical_Limits",
+            "path": "Non_Medical_Limits",
+            "alias": "Non Medical Limits",
+            "isSatisfied": false,
+            "hasQuestions": true,
+            "isWrapUpLine": false,
+            "isGlobal": true,
+            "isRoot": true,
+            "isForced": false,
+            "tags": [],
+            "triggers": ["Non Medical Limits"],
+            "triggerQuestions": {},
+            "questions": [
+              {
+                "name": "PRODUCT",
+                "path": "PRODUCT",
+                "locale": "EN_US",
+                "hasAnswer": false,
+                "isSatisfied": false,
+                "triggeredLines": [],
+                "answers": [],
+                "validationErrors": {}
+              }
+            ],
+            "buckets": [],
+            "staticallyTriggeredLines": []
+          }
+        ]
+      }
+    ],
+    "allAnswers": {
+      "BIRTHDATE": [],
+      "GENDER": [],
+      "MIB_PRESENT": [],
+      "PRODUCT": [],
+      "RX_PRESENT": [],
+      "SOURCE": []
+    },
+    "debugInfo": {}
+  }
+  
+}

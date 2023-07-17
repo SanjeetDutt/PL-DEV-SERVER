@@ -1,0 +1,141 @@
+{
+	"enquiryId": "f09d35d9-57a4-4857-a9ae-fd7cd6f31116",
+	"branch": "PLGroupBen",
+	"tag": "PL_WPB_v9",
+	"locale": "EN_US",
+	"availableLocales": ["EN_US"],
+	"effectiveDate": 1689033600000,
+	"isVoid": false,
+	"isSatisfied": false,
+	"isCloseable": false,
+	"isOpen": true,
+	"buckets": [],
+	"sections": [
+		{
+			"name": "Your Basic Details",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Your_Basic_Details",
+					"path": "Your_Basic_Details",
+					"alias": "Your Basic Details",
+					"section": "Your Basic Details",
+					"preamble": "Please tell us your basic quote information",
+					"rawSection": "Your Basic Details",
+					"rawPreamble": "Please tell us your basic quote information",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": true,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Your Basic Details"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "SOURCE",
+							"path": "SOURCE",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {
+
+              }
+						},
+						{
+							"name": "GENDER",
+							"path": "GENDER",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {}
+						},
+						{
+							"name": "BIRTHDATE",
+							"path": "BIRTHDATE",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": ["2024-01-01"],
+							"validationErrors": {
+                "2024-01-01":"DOB cannot greater than todays date"
+              }
+						},
+						{
+							"name": "MIB_PRESENT",
+							"path": "MIB_PRESENT",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {}
+						},
+						{
+							"name": "RX_PRESENT",
+							"path": "RX_PRESENT",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {}
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Non_Medical_Limits",
+					"path": "Non_Medical_Limits",
+					"alias": "Non Medical Limits",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": true,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Non Medical Limits"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "PRODUCT",
+							"path": "PRODUCT",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {}
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		}
+	],
+	"allAnswers": {
+		"BIRTHDATE": [],
+		"GENDER": [],
+		"MIB_PRESENT": [],
+		"PRODUCT": [],
+		"RX_PRESENT": [],
+		"SOURCE": []
+	},
+	"debugInfo": {}
+}

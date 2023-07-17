@@ -1,0 +1,199 @@
+{
+	"sections": [
+		{
+			"name": "Very first section",
+			"enquiryLines": [
+				{
+					"_uid": "Your_Basic_Details",
+					"isSatisfied": false,
+					"path": "Your Basic Details",
+					"name": "Your Basic Details",
+					"questions": [
+						{
+							"_uid": "SOURCE",
+							"isSatisfied": false,
+							"path": "SOURCE",
+							"name": "SOURCE",
+							"text": "Data source",
+							"helpText": "This is your first name we are fetching from Ben Admin, please update if not corect.<br />",
+							"isMultiValued": true,
+							"optionsListName": "SourceOptions",
+							"options": [
+								{
+									"_uid": "INITIAL",
+									"name": "INITIAL",
+									"text": "Initial application form"
+								},
+								{
+									"_uid": "BLOODS",
+									"name": "BLOODS",
+									"text": "Blood test"
+								},
+								{
+									"_uid": "EXAM",
+									"name": "EXAM",
+									"text": "Mini-screen"
+								}
+							],
+							"tags": []
+						},
+						{
+							"_uid": "FIRSTNAME",
+							"isSatisfied": false,
+							"path": "FIRSTNAME",
+							"name": "FIRSTNAME",
+							"text": "First Name",
+							"helpText": "This is your first name we are fetching from Ben Admin, please update if not corect.<br />",
+							"isMultiValued": false,
+							"errorMsg": "Please enter first name.",
+							"options": [],
+							"tags": []
+						},
+						{
+							"_uid": "LASTNAME",
+							"isSatisfied": false,
+							"path": "LASTNAME",
+							"name": "LASTNAME",
+							"text": "Last Name",
+							"isMultiValued": false,
+							"options": [],
+							"tags": []
+						},
+						{
+							"_uid": "BIRTHDATE",
+							"isSatisfied": false,
+							"path": "BIRTHDATE",
+							"name": "BIRTHDATE",
+							"text": "Date of birth",
+							"isMultiValued": false,
+							"options": [],
+							"tags": ["datePicker"]
+						},
+						{
+							"_uid": "GENDER",
+							"isSatisfied": false,
+							"path": "GENDER",
+							"name": "GENDER",
+							"text": "Sex of life assured",
+							"isMultiValued": false,
+							"optionsListName": "GenderOptions",
+							"options": [
+								{
+									"_uid": "MALE",
+									"name": "MALE",
+									"text": "Male"
+								},
+								{
+									"_uid": "FEMALE",
+									"name": "FEMALE",
+									"text": "Female"
+								}
+							],
+							"tags": []
+						},
+						{
+							"_uid": "EMAILID",
+							"isSatisfied": false,
+							"path": "EMAILID",
+							"name": "EMAILID",
+							"text": "Email Id",
+							"isMultiValued": false,
+							"options": [],
+							"tags": []
+						},
+						{
+							"_uid": "MOBILE",
+							"isSatisfied": false,
+							"path": "MOBILE",
+							"name": "MOBILE",
+							"text": "Mobile #",
+							"isMultiValued": false,
+							"options": [],
+							"tags": []
+						},
+						{
+							"_uid": "PRODUCT",
+							"isSatisfied": false,
+							"path": "PRODUCT",
+							"name": "PRODUCT",
+							"text": "Products included in the application",
+							"isMultiValued": true,
+							"optionsListName": "ProductOptions",
+							"options": [
+								{
+									"_uid": "LIFE",
+									"name": "LIFE",
+									"text": "Life"
+								},
+								{
+									"_uid": "CI",
+									"name": "CI",
+									"text": "Critical Illness"
+								},
+								{
+									"_uid": "IP",
+									"name": "IP",
+									"text": "Income Protection"
+								},
+								{
+									"_uid": "TPD",
+									"name": "TPD",
+									"text": "Total Permanent Disability"
+								},
+								{
+									"_uid": "WOP",
+									"name": "WOP",
+									"text": "Waiver of Premium"
+								}
+							],
+							"tags": []
+						},
+						{
+							"_uid": "BASKET_LIFE_COVER",
+							"isSatisfied": false,
+							"path": "BASKET_LIFE_COVER",
+							"name": "BASKET_LIFE_COVER",
+							"text": "Face Amount",
+							"isMultiValued": false,
+							"options": [],
+							"tags": ["currency"]
+						},
+						{
+							"_uid": "EARNINGS",
+							"isSatisfied": false,
+							"path": "EARNINGS",
+							"name": "EARNINGS",
+							"text": "How much did you earn in the last year?",
+							"helpText": "This is your taxable income. You can include overtime, commission and bonuses but you can't include income from investments.<br />Don't include any income that would continue if you can't work<br />If you're self employed, please tell us your taxable income - in other words earnings after costs and before tax.<br />",
+							"isMultiValued": false,
+							"options": [],
+							"tags": ["currency"]
+						},
+						{
+							"_uid": "HIPAACONSENT",
+							"isSatisfied": false,
+							"path": "HIPAACONSENT",
+							"name": "HIPAACONSENT",
+							"text": "HIPAA Consent",
+							"isMultiValued": false,
+							"optionsListName": "HIPAAOptions",
+							"options": [
+								{
+									"_uid": "YES",
+									"name": "YES",
+									"text": "Yes"
+								},
+								{
+									"_uid": "NO",
+									"name": "NO",
+									"text": "No"
+								}
+							],
+							"tags": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
