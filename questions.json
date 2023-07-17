@@ -70,6 +70,7 @@
 							"tags": ["datePicker"]
 						},
 						{
+							"type": "option",
 							"_uid": "GENDER",
 							"isSatisfied": false,
 							"path": "GENDER",

@@ -1,32 +1,95 @@
 {
 	"info": {
-		"_postman_id": "9145a284-1086-492e-897a-9eb567b7a4bc",
+		"_postman_id": "8961394d-d359-4e39-a23d-12a7a5714dcf",
 		"name": "New Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "18336681"
+		"_exporter_id": "28369156"
 	},
 	"item": [
 		{
-			"name": "GET ALL RESPONSE",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{url}}/questions",
-					"host": ["{{url}}"],
-					"path": ["questions"]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "POST RESPONSE",
+			"name": "Start Enquiry",
 			"request": {
 				"method": "POST",
 				"header": [],
+				"url": {
+					"raw": "{{url}}/v4/startEnquiry",
+					"host": ["{{url}}"],
+					"path": ["v4", "startEnquiry"]
+				}
+			},
+			"response": [
+				{
+					"name": "Initial response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v4/startEnquiry",
+							"host": ["{{url}}"],
+							"path": ["v4", "startEnquiry"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,POST,PATCH,DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5380"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1504-ykJC/DzlXgRQIheoYr/eeahHvAE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Jul 2023 13:48:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"branch\": \"PL\",\n    \"tag\": \"PL\",\n    \"locale\": \"EN_US\",\n    \"availableLocale\": [\n        \"EN_US\"\n    ],\n    \"effectiveDate\": 1689033600000,\n    \"isVoid\": false,\n    \"isSatisfied\": false,\n    \"isClosable\": false,\n    \"isOpen\": true,\n    \"buckets\": [],\n    \"enquiryId\": \"1689169694767\",\n    \"section\": [\n        {\n            \"name\": \"Very first section\",\n            \"enquiryLines\": [\n                {\n                    \"_uid\": \"Your_Basic_Details\",\n                    \"name\": \"Your Basic Details\",\n                    \"questions\": [\n                        {\n                            \"_uid\": \"SOURCE\",\n                            \"name\": \"SOURCE\",\n                            \"text\": \"Data source\",\n                            \"helpText\": \"This is your first name we are fetching from Ben Admin, please update if not corect.<br />\",\n                            \"isMultiValued\": true,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"INITIAL\",\n                                    \"name\": \"INITIAL\",\n                                    \"text\": \"Initial application form\"\n                                },\n                                {\n                                    \"_uid\": \"BLOODS\",\n                                    \"name\": \"BLOODS\",\n                                    \"text\": \"Blood test\"\n                                },\n                                {\n                                    \"_uid\": \"EXAM\",\n                                    \"name\": \"EXAM\",\n                                    \"text\": \"Mini-screen\"\n                                }\n                            ],\n                            \"tags\": []\n                        },\n                        {\n                            \"_uid\": \"FIRSTNAME\",\n                            \"name\": \"FIRSTNAME\",\n                            \"text\": \"First Name\",\n                            \"helpText\": \"This is your first name we are fetching from Ben Admin, please update if not corect.<br />\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": []\n                        },\n                        {\n                            \"_uid\": \"LASTNAME\",\n                            \"name\": \"LASTNAME\",\n                            \"text\": \"Last Name\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": []\n                        },\n                        {\n                            \"_uid\": \"BIRTHDATE\",\n                            \"name\": \"BIRTHDATE\",\n                            \"text\": \"Date of birth\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [\n                                \"datePicker\"\n                            ]\n                        },\n                        {\n                            \"_uid\": \"GENDER\",\n                            \"name\": \"GENDER\",\n                            \"text\": \"Sex of life assured\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"MALE\",\n                                    \"name\": \"MALE\",\n                                    \"text\": \"Male\"\n                                },\n                                {\n                                    \"_uid\": \"FEMALE\",\n                                    \"name\": \"FEMALE\",\n                                    \"text\": \"Female\"\n                                }\n                            ],\n                            \"tags\": []\n                        },\n                        {\n                            \"_uid\": \"EMAILID\",\n                            \"name\": \"EMAILID\",\n                            \"text\": \"Email Id\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": []\n                        },\n                        {\n                            \"_uid\": \"MOBILE\",\n                            \"name\": \"MOBILE\",\n                            \"text\": \"Mobile #\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": []\n                        },\n                        {\n                            \"_uid\": \"PRODUCT\",\n                            \"name\": \"PRODUCT\",\n                            \"text\": \"Products included in the application\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": true,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"LIFE\",\n                                    \"name\": \"LIFE\",\n                                    \"text\": \"Life\"\n                                },\n                                {\n                                    \"_uid\": \"CI\",\n                                    \"name\": \"CI\",\n                                    \"text\": \"Critical Illness\"\n                                },\n                                {\n                                    \"_uid\": \"IP\",\n                                    \"name\": \"IP\",\n                                    \"text\": \"Income Protection\"\n                                },\n                                {\n                                    \"_uid\": \"TPD\",\n                                    \"name\": \"TPD\",\n                                    \"text\": \"Total Permanent Disability\"\n                                },\n                                {\n                                    \"_uid\": \"WOP\",\n                                    \"name\": \"WOP\",\n                                    \"text\": \"Waiver of Premium\"\n                                }\n                            ],\n                            \"tags\": []\n                        },\n                        {\n                            \"_uid\": \"BASKET_LIFE_COVER\",\n                            \"name\": \"BASKET_LIFE_COVER\",\n                            \"text\": \"Face Amount\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [\n                                \"currency\"\n                            ]\n                        },\n                        {\n                            \"_uid\": \"EARNINGS\",\n                            \"name\": \"EARNINGS\",\n                            \"text\": \"How much did you earn in the last year?\",\n                            \"helpText\": \"This is your taxable income. You can include overtime, commission and bonuses but you can't include income from investments.<br />Don't include any income that would continue if you can't work<br />If you're self employed, please tell us your taxable income - in other words earnings after costs and before tax.<br />\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [\n                                \"currency\"\n                            ]\n                        },\n                        {\n                            \"_uid\": \"HIPAACONSENT\",\n                            \"name\": \"HIPAACONSENT\",\n                            \"text\": \"HIPAA Consent\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"YES\",\n                                    \"name\": \"YES\",\n                                    \"text\": \"Yes\"\n                                },\n                                {\n                                    \"_uid\": \"NO\",\n                                    \"name\": \"NO\",\n                                    \"text\": \"No\"\n                                }\n                            ],\n                            \"tags\": []\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"name\": \"Second section\",\n            \"enquiryLines\": [\n                {\n                    \"_uid\": \"Your_Basic_Details\",\n                    \"name\": \"Your_Basic_Details\",\n                    \"questions\": [\n                        {\n                            \"_uid\": \"SOURCE\",\n                            \"name\": \"SOURCE\",\n                            \"text\": \"Data source\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": true,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"INITIAL\",\n                                    \"name\": \"INITIAL\",\n                                    \"text\": \"Initial application form\"\n                                },\n                                {\n                                    \"_uid\": \"BLOODS\",\n                                    \"name\": \"BLOODS\",\n                                    \"text\": \"Blood test\"\n                                },\n                                {\n                                    \"_uid\": \"EXAM\",\n                                    \"name\": \"EXAM\",\n                                    \"text\": \"Mini-screen\"\n                                }\n                            ],\n                            \"tags\": []\n                        },\n                        {\n                            \"_uid\": \"FIRSTNAME\",\n                            \"name\": \"FIRSTNAME\",\n                            \"text\": \"First Name\",\n                            \"helpText\": \"This is your first name we are fetching from Ben Admin, please update if not corect.<br />\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": []\n                        },\n                        {\n                            \"_uid\": \"LASTNAME\",\n                            \"name\": \"LASTNAME\",\n                            \"text\": \"Last Name\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": []\n                        },\n                        {\n                            \"_uid\": \"BIRTHDATE\",\n                            \"name\": \"BIRTHDATE\",\n                            \"text\": \"Date of birth\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [\n                                \"datePicker\"\n                            ]\n                        },\n                        {\n                            \"_uid\": \"GENDER\",\n                            \"name\": \"GENDER\",\n                            \"text\": \"Sex of life assured\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"MALE\",\n                                    \"name\": \"MALE\",\n                                    \"text\": \"Male\"\n                                },\n                                {\n                                    \"_uid\": \"FEMALE\",\n                                    \"name\": \"FEMALE\",\n                                    \"text\": \"Female\"\n                                }\n                            ],\n                            \"tags\": []\n                        },\n                        {\n                            \"_uid\": \"EMAILID\",\n                            \"name\": \"EMAILID\",\n                            \"text\": \"Email Id\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": []\n                        },\n                        {\n                            \"_uid\": \"MOBILE\",\n                            \"name\": \"MOBILE\",\n                            \"text\": \"Mobile #\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": []\n                        },\n                        {\n                            \"_uid\": \"PRODUCT\",\n                            \"name\": \"PRODUCT\",\n                            \"text\": \"Products included in the application\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": true,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"LIFE\",\n                                    \"name\": \"LIFE\",\n                                    \"text\": \"Life\"\n                                },\n                                {\n                                    \"_uid\": \"CI\",\n                                    \"name\": \"CI\",\n                                    \"text\": \"Critical Illness\"\n                                },\n                                {\n                                    \"_uid\": \"IP\",\n                                    \"name\": \"IP\",\n                                    \"text\": \"Income Protection\"\n                                },\n                                {\n                                    \"_uid\": \"TPD\",\n                                    \"name\": \"TPD\",\n                                    \"text\": \"Total Permanent Disability\"\n                                },\n                                {\n                                    \"_uid\": \"WOP\",\n                                    \"name\": \"WOP\",\n                                    \"text\": \"Waiver of Premium\"\n                                }\n                            ],\n                            \"tags\": []\n                        },\n                        {\n                            \"_uid\": \"BASKET_LIFE_COVER\",\n                            \"name\": \"BASKET_LIFE_COVER\",\n                            \"text\": \"Face Amount\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [\n                                \"currency\"\n                            ]\n                        },\n                        {\n                            \"_uid\": \"EARNINGS\",\n                            \"name\": \"EARNINGS\",\n                            \"text\": \"How much did you earn in the last year?\",\n                            \"helpText\": \"This is your taxable income. You can include overtime, commission and bonuses but you can't include income from investments.<br />Don't include any income that would continue if you can't work<br />If you're self employed, please tell us your taxable income - in other words earnings after costs and before tax.<br />\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [\n                                \"currency\"\n                            ]\n                        },\n                        {\n                            \"_uid\": \"HIPAACONSENT\",\n                            \"name\": \"HIPAACONSENT\",\n                            \"text\": \"HIPAA Consent\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"YES\",\n                                    \"name\": \"YES\",\n                                    \"text\": \"Yes\"\n                                },\n                                {\n                                    \"_uid\": \"NO\",\n                                    \"name\": \"NO\",\n                                    \"text\": \"No\"\n                                }\n                            ],\n                            \"tags\": []\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET USER RESPONSE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"response\":\"SANJEET DUTT\"\r\n}",
+					"raw": "{\n    \"response\": {\n        \"FIRSTNAME\": [\n            \"SANJEET\"\n        ]\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -34,18 +97,196 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/questions/:id",
+					"raw": "{{url}}/v4/getEnquiry/:enquiryId",
 					"host": ["{{url}}"],
-					"path": ["questions", ":id"],
+					"path": ["v4", "getEnquiry", ":enquiryId"],
 					"variable": [
 						{
-							"key": "id",
-							"value": "1"
+							"key": "enquiryId",
+							"value": "1689583995688"
 						}
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "GET USER RESPONSE",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"response\": {\n        \"FIRSTNAME\": [\n            \"SANJEET\"\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v4/getEnquiry/:enquiryId",
+							"host": ["{{url}}"],
+							"path": ["v4", "getEnquiry", ":enquiryId"],
+							"variable": [
+								{
+									"key": "enquiryId",
+									"value": "1689583995688"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,POST,PATCH,DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3853"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f0d-Ckx+qhEZqpsG/VB4FDkYpeEtzjE\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 08:57:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"branch\": \"PL\",\n    \"tag\": \"PL\",\n    \"locale\": \"EN_US\",\n    \"availableLocale\": [\n        \"EN_US\"\n    ],\n    \"effectiveDate\": 1689033600000,\n    \"isVoid\": false,\n    \"isSatisfied\": false,\n    \"isClosable\": false,\n    \"isOpen\": true,\n    \"buckets\": [],\n    \"debugInfo\": {},\n    \"enquiryId\": \"1689583995688\",\n    \"section\": [\n        {\n            \"name\": \"Very first section\",\n            \"enquiryLines\": [\n                {\n                    \"_uid\": \"Your_Basic_Details\",\n                    \"name\": \"Your Basic Details\",\n                    \"questions\": [\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"SOURCE\",\n                            \"name\": \"SOURCE\",\n                            \"text\": \"Data source\",\n                            \"helpText\": \"This is your first name we are fetching from Ben Admin, please update if not corect.<br />\",\n                            \"isMultiValued\": true,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"INITIAL\",\n                                    \"name\": \"INITIAL\",\n                                    \"text\": \"Initial application form\"\n                                },\n                                {\n                                    \"_uid\": \"BLOODS\",\n                                    \"name\": \"BLOODS\",\n                                    \"text\": \"Blood test\"\n                                },\n                                {\n                                    \"_uid\": \"EXAM\",\n                                    \"name\": \"EXAM\",\n                                    \"text\": \"Mini-screen\"\n                                }\n                            ],\n                            \"tags\": [],\n                            \"optionListName\": \"SourceOptions\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"FIRSTNAME\",\n                            \"name\": \"FIRSTNAME\",\n                            \"text\": \"First Name\",\n                            \"helpText\": \"This is your first name we are fetching from Ben Admin, please update if not corect.<br />\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [],\n                            \"optionListName\": \"\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"LASTNAME\",\n                            \"name\": \"LASTNAME\",\n                            \"text\": \"Last Name\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [],\n                            \"optionListName\": \"\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"BIRTHDATE\",\n                            \"name\": \"BIRTHDATE\",\n                            \"text\": \"Date of birth\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [\n                                \"datePicker\"\n                            ],\n                            \"optionListName\": \"\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"GENDER\",\n                            \"name\": \"GENDER\",\n                            \"text\": \"Sex of life assured\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"MALE\",\n                                    \"name\": \"MALE\",\n                                    \"text\": \"Male\"\n                                },\n                                {\n                                    \"_uid\": \"FEMALE\",\n                                    \"name\": \"FEMALE\",\n                                    \"text\": \"Female\"\n                                }\n                            ],\n                            \"tags\": [],\n                            \"optionListName\": \"GenderOptions\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"EMAILID\",\n                            \"name\": \"EMAILID\",\n                            \"text\": \"Email Id\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [],\n                            \"optionListName\": \"\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"MOBILE\",\n                            \"name\": \"MOBILE\",\n                            \"text\": \"Mobile #\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [],\n                            \"optionListName\": \"\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"PRODUCT\",\n                            \"name\": \"PRODUCT\",\n                            \"text\": \"Products included in the application\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": true,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"LIFE\",\n                                    \"name\": \"LIFE\",\n                                    \"text\": \"Life\"\n                                },\n                                {\n                                    \"_uid\": \"CI\",\n                                    \"name\": \"CI\",\n                                    \"text\": \"Critical Illness\"\n                                },\n                                {\n                                    \"_uid\": \"IP\",\n                                    \"name\": \"IP\",\n                                    \"text\": \"Income Protection\"\n                                },\n                                {\n                                    \"_uid\": \"TPD\",\n                                    \"name\": \"TPD\",\n                                    \"text\": \"Total Permanent Disability\"\n                                },\n                                {\n                                    \"_uid\": \"WOP\",\n                                    \"name\": \"WOP\",\n                                    \"text\": \"Waiver of Premium\"\n                                }\n                            ],\n                            \"tags\": [],\n                            \"optionListName\": \"ProductOptions\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"BASKET_LIFE_COVER\",\n                            \"name\": \"BASKET_LIFE_COVER\",\n                            \"text\": \"Face Amount\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [\n                                \"currency\"\n                            ],\n                            \"optionListName\": \"\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"EARNINGS\",\n                            \"name\": \"EARNINGS\",\n                            \"text\": \"How much did you earn in the last year?\",\n                            \"helpText\": \"This is your taxable income. You can include overtime, commission and bonuses but you can't include income from investments.<br />Don't include any income that would continue if you can't work<br />If you're self employed, please tell us your taxable income - in other words earnings after costs and before tax.<br />\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [\n                                \"currency\"\n                            ],\n                            \"optionListName\": \"\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"HIPAACONSENT\",\n                            \"name\": \"HIPAACONSENT\",\n                            \"text\": \"HIPAA Consent\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"YES\",\n                                    \"name\": \"YES\",\n                                    \"text\": \"Yes\"\n                                },\n                                {\n                                    \"_uid\": \"NO\",\n                                    \"name\": \"NO\",\n                                    \"text\": \"No\"\n                                }\n                            ],\n                            \"tags\": [],\n                            \"optionListName\": \"HIPAAOptions\"\n                        }\n                    ],\n                    \"path\": \"Your Basic Details\",\n                    \"isSatisfied\": false\n                }\n            ],\n            \"hasQuestion\": true,\n            \"isSatisfied\": false\n        }\n    ],\n    \"allAnswer\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "SAVE USER RESPONSE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"response\": {\n        \"FIRSTNAME\": [\n            \"SANJEET\"\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v4/save-response/:enquiryId",
+					"host": ["{{url}}"],
+					"path": ["v4", "save-response", ":enquiryId"],
+					"variable": [
+						{
+							"key": "enquiryId",
+							"value": "1689583995688"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SAVE USER RESPONSE",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"response\": {\n        \"FIRSTNAME\": [\n            \"SANJEET\"\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v4/save-response/:enquiryId",
+							"host": ["{{url}}"],
+							"path": ["v4", "save-response", ":enquiryId"],
+							"variable": [
+								{
+									"key": "enquiryId",
+									"value": "1689583995688"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,POST,PATCH,DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3911"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f47-AZDcPWOfinantW4D+VO/hnWSz7I\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Jul 2023 09:04:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"branch\": \"PL\",\n    \"tag\": \"PL\",\n    \"locale\": \"EN_US\",\n    \"availableLocale\": [\n        \"EN_US\"\n    ],\n    \"effectiveDate\": 1689033600000,\n    \"isVoid\": false,\n    \"isSatisfied\": false,\n    \"isClosable\": false,\n    \"isOpen\": true,\n    \"buckets\": [],\n    \"debugInfo\": {},\n    \"enquiryId\": \"1689583995688\",\n    \"section\": [\n        {\n            \"name\": \"Very first section\",\n            \"enquiryLines\": [\n                {\n                    \"_uid\": \"Your_Basic_Details\",\n                    \"name\": \"Your Basic Details\",\n                    \"questions\": [\n                        {\n                            \"isSatisfied\": true,\n                            \"path\": \"\",\n                            \"answer\": [\n                                \"BLOODS\"\n                            ],\n                            \"type\": \"text\",\n                            \"_uid\": \"SOURCE\",\n                            \"name\": \"SOURCE\",\n                            \"text\": \"Data source\",\n                            \"helpText\": \"This is your first name we are fetching from Ben Admin, please update if not corect.<br />\",\n                            \"isMultiValued\": true,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"INITIAL\",\n                                    \"name\": \"INITIAL\",\n                                    \"text\": \"Initial application form\"\n                                },\n                                {\n                                    \"_uid\": \"BLOODS\",\n                                    \"name\": \"BLOODS\",\n                                    \"text\": \"Blood test\"\n                                },\n                                {\n                                    \"_uid\": \"EXAM\",\n                                    \"name\": \"EXAM\",\n                                    \"text\": \"Mini-screen\"\n                                }\n                            ],\n                            \"tags\": [],\n                            \"optionListName\": \"SourceOptions\"\n                        },\n                        {\n                            \"isSatisfied\": true,\n                            \"path\": \"\",\n                            \"answer\": [\n                                \"SANJEET\"\n                            ],\n                            \"type\": \"text\",\n                            \"_uid\": \"FIRSTNAME\",\n                            \"name\": \"FIRSTNAME\",\n                            \"text\": \"First Name\",\n                            \"helpText\": \"This is your first name we are fetching from Ben Admin, please update if not corect.<br />\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [],\n                            \"optionListName\": \"\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"LASTNAME\",\n                            \"name\": \"LASTNAME\",\n                            \"text\": \"Last Name\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [],\n                            \"optionListName\": \"\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"BIRTHDATE\",\n                            \"name\": \"BIRTHDATE\",\n                            \"text\": \"Date of birth\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [\n                                \"datePicker\"\n                            ],\n                            \"optionListName\": \"\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"GENDER\",\n                            \"name\": \"GENDER\",\n                            \"text\": \"Sex of life assured\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"MALE\",\n                                    \"name\": \"MALE\",\n                                    \"text\": \"Male\"\n                                },\n                                {\n                                    \"_uid\": \"FEMALE\",\n                                    \"name\": \"FEMALE\",\n                                    \"text\": \"Female\"\n                                }\n                            ],\n                            \"tags\": [],\n                            \"optionListName\": \"GenderOptions\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"EMAILID\",\n                            \"name\": \"EMAILID\",\n                            \"text\": \"Email Id\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [],\n                            \"optionListName\": \"\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"MOBILE\",\n                            \"name\": \"MOBILE\",\n                            \"text\": \"Mobile #\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [],\n                            \"optionListName\": \"\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"PRODUCT\",\n                            \"name\": \"PRODUCT\",\n                            \"text\": \"Products included in the application\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": true,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"LIFE\",\n                                    \"name\": \"LIFE\",\n                                    \"text\": \"Life\"\n                                },\n                                {\n                                    \"_uid\": \"CI\",\n                                    \"name\": \"CI\",\n                                    \"text\": \"Critical Illness\"\n                                },\n                                {\n                                    \"_uid\": \"IP\",\n                                    \"name\": \"IP\",\n                                    \"text\": \"Income Protection\"\n                                },\n                                {\n                                    \"_uid\": \"TPD\",\n                                    \"name\": \"TPD\",\n                                    \"text\": \"Total Permanent Disability\"\n                                },\n                                {\n                                    \"_uid\": \"WOP\",\n                                    \"name\": \"WOP\",\n                                    \"text\": \"Waiver of Premium\"\n                                }\n                            ],\n                            \"tags\": [],\n                            \"optionListName\": \"ProductOptions\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"BASKET_LIFE_COVER\",\n                            \"name\": \"BASKET_LIFE_COVER\",\n                            \"text\": \"Face Amount\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [\n                                \"currency\"\n                            ],\n                            \"optionListName\": \"\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"EARNINGS\",\n                            \"name\": \"EARNINGS\",\n                            \"text\": \"How much did you earn in the last year?\",\n                            \"helpText\": \"This is your taxable income. You can include overtime, commission and bonuses but you can't include income from investments.<br />Don't include any income that would continue if you can't work<br />If you're self employed, please tell us your taxable income - in other words earnings after costs and before tax.<br />\",\n                            \"isMultiValued\": false,\n                            \"options\": [],\n                            \"tags\": [\n                                \"currency\"\n                            ],\n                            \"optionListName\": \"\"\n                        },\n                        {\n                            \"isSatisfied\": false,\n                            \"path\": \"\",\n                            \"answer\": [],\n                            \"type\": \"text\",\n                            \"_uid\": \"HIPAACONSENT\",\n                            \"name\": \"HIPAACONSENT\",\n                            \"text\": \"HIPAA Consent\",\n                            \"helpText\": \"\",\n                            \"isMultiValued\": false,\n                            \"options\": [\n                                {\n                                    \"_uid\": \"YES\",\n                                    \"name\": \"YES\",\n                                    \"text\": \"Yes\"\n                                },\n                                {\n                                    \"_uid\": \"NO\",\n                                    \"name\": \"NO\",\n                                    \"text\": \"No\"\n                                }\n                            ],\n                            \"tags\": [],\n                            \"optionListName\": \"HIPAAOptions\"\n                        }\n                    ],\n                    \"path\": \"Your Basic Details\",\n                    \"isSatisfied\": false\n                }\n            ],\n            \"hasQuestion\": true,\n            \"isSatisfied\": false\n        }\n    ],\n    \"allAnswer\": {\n        \"SOURCE\": [\n            \"BLOODS\"\n        ],\n        \"FIRSTNAME\": [\n            \"SANJEET\"\n        ]\n    }\n}"
+				}
+			]
 		}
 	]
 }

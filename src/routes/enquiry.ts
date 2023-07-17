@@ -34,6 +34,16 @@ router.post('/startEnquiry', async (req: Request, res: Response, next: NextFunct
 	}
 });
 
+// Call to create a new enquiry
+router.get('/getEnquiry/:enquiryId', async (req: Request<{ enquiryId: string }, {}, {}>, res: Response, next: NextFunction) => {
+	try {
+		const enquiryResponse = await getResponse(req.params.enquiryId);
+		res.status(200).json(enquiryResponse);
+	} catch (error) {
+		next(error);
+	}
+});
+
 // Post the response of a question
 router.post('/save-response/:enquiryId', async (req: Request<{ enquiryId: string }, {}, { response: { [key: string]: string[] } }>, res: Response, next: NextFunction) => {
 	const enquiryId = req.params.enquiryId;
