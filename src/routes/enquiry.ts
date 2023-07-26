@@ -44,10 +44,16 @@ router.get('/getEnquiry/:enquiryId', async (req: Request<{ enquiryId: string }, 
 	}
 });
 
+type postBobyType = {
+	answer: { [key: string]: string[] };
+	locale: string;
+	username: string;
+	debug: boolean;
+};
 // Post the response of a question
-router.post('/save-response/:enquiryId', async (req: Request<{ enquiryId: string }, {}, { response: { [key: string]: string[] } }>, res: Response, next: NextFunction) => {
+router.post('/enquiry/:enquiryId', async (req: Request<{ enquiryId: string }, {}, postBobyType>, res: Response, next: NextFunction) => {
 	const enquiryId = req.params.enquiryId;
-	const responses = req.body.response;
+	const responses = req.body.answer;
 
 	for (const questionName of Object.keys(responses)) {
 		if (!(await saveResponse(enquiryId, questionName, responses[questionName]))) {

@@ -9,8 +9,8 @@ const get = <T>(json: {}, key: string, defaultValue: T): T => {
 
 export default class Enquiry {
 	enquiryId: string;
-	branch: string = CONSTANTS.BRANCH;
-	tag: string = CONSTANTS.TAG;
+	branch: string;
+	tag: string;
 	locale: string = 'EN_US';
 	availableLocale: string[] = ['EN_US'];
 	effectiveDate: number = 1689033600000;
@@ -19,15 +19,27 @@ export default class Enquiry {
 	isClosable: boolean = false; // Still unclear
 	isOpen: boolean = true; // Still unclear
 	buckets: any[] = []; // Still unclear
-	section: Section[];
+	sections: Section[];
 	allAnswer: {};
 	debugInfo: {} = {};
 
 	constructor(enquiryId: string, questionJson: {}, responseJson: {}) {
 		this.enquiryId = enquiryId;
-		this.section = get<[]>(questionJson, 'sections', []).map((section) => new Section(section, responseJson));
+
+		//populating from question.json
+		this.branch = get<string>(questionJson, 'branch', CONSTANTS.BRANCH);
+		this.tag = get<string>(questionJson, 'tag', CONSTANTS.TAG);
+		this.locale = get<string>(questionJson, 'locale', 'EN_US');
+		this.availableLocale = get<string[]>(questionJson, 'availableLocale', ['EN_US']);
+		this.effectiveDate = get<number>(questionJson, 'effectiveDate', 1689033600000);
+		this.isVoid = get<boolean>(questionJson, 'isVoid', false);
+		this.isClosable = get<boolean>(questionJson, 'isClosable', false);
+		this.isOpen = get<boolean>(questionJson, 'isOpen', true);
+		this.buckets = get<any>(questionJson, 'buckets', []);
+
+		this.sections = get<[]>(questionJson, 'sections', []).map((section) => new Section(section, responseJson));
 		this.allAnswer = responseJson;
-		this.isSatisfied = this.section.filter((section) => !section.isSatisfied).length === 0;
+		this.isSatisfied = this.sections.filter((section) => !section.isSatisfied).length === 0;
 	}
 }
 
@@ -46,45 +58,70 @@ export class Section {
 }
 
 export class EnquiryLine {
-	_uid: string;
 	isSatisfied: boolean;
 	path: string;
 	name: string;
 	questions: Question[];
 
+	alias: string;
+	section: string;
+	preamble: string;
+	rawSection: string;
+	rawPreamble: string;
+	hasQuestions: boolean;
+	isWrapUpLine: boolean;
+	isGlobal: boolean;
+	isRoot: boolean;
+	isForced: boolean;
+	tags: string[];
+	triggers: string[];
+	triggerQuestions: {};
+	bucket: [];
+	staticallyTriggeredLines: [];
+
 	constructor(enquiryLineJson: {}, responseJson: {}) {
-		this._uid = get<string>(enquiryLineJson, '_uid', '');
 		this.name = get<string>(enquiryLineJson, 'name', '');
-		this.questions = get<[]>(enquiryLineJson, 'questions', []).map((question) => new Question(question, responseJson));
 		this.path = get<string>(enquiryLineJson, 'path', '');
+
+		this.alias = get<string>(enquiryLineJson, 'alias', '');
+		this.section = get<string>(enquiryLineJson, 'section', '');
+		this.preamble = get<string>(enquiryLineJson, 'preamble', '');
+		this.rawSection = get<string>(enquiryLineJson, 'rawSection', '');
+		this.rawPreamble = get<string>(enquiryLineJson, 'rawPreamble', '');
+		this.hasQuestions = get<boolean>(enquiryLineJson, 'hasQuestions', false);
+		this.isWrapUpLine = get<boolean>(enquiryLineJson, 'isWrapUpLine', false);
+		this.isGlobal = get<boolean>(enquiryLineJson, 'isGlobal', false);
+		this.isRoot = get<boolean>(enquiryLineJson, 'isRoot', false);
+		this.isForced = get<boolean>(enquiryLineJson, 'isForced', false);
+		this.tags = get<string[]>(enquiryLineJson, 'tags', []);
+		this.triggers = get<string[]>(enquiryLineJson, 'triggers', []);
+		this.triggerQuestions = get<string>(enquiryLineJson, 'triggerQuestions', '');
+		this.bucket = get<[]>(enquiryLineJson, 'bucket', []);
+		this.staticallyTriggeredLines = get<[]>(enquiryLineJson, 'staticallyTriggeredLines', []);
+
+		this.questions = get<[]>(enquiryLineJson, 'questions', []).map((question) => new Question(question, responseJson));
 		this.isSatisfied = this.questions.filter((question) => !question.isSatisfied).length === 0;
 	}
 }
 
 export class Question {
-	_uid: string;
+  name: string;
+  path: string;
+  locale:string;
+  hasAnswer: boolean;
 	isSatisfied: boolean = false;
-	path: string = '';
-	name: string;
-	text: string;
-	helpText: string;
-	isMultiValued: boolean;
+  triggeredLines: string[];
 	answer: string[] = [];
-	optionListName: string;
-	options: EnquiryOption[];
-	tags: string[];
-	errorMsg: string;
-	type: string = 'text';
+	validationErrors:{};
+  definition: {};
 
 	constructor(questionJson: {}, responseJson: {}) {
-		this._uid = get<string>(questionJson, '_uid', '');
 		this.name = get<string>(questionJson, 'name', '');
-		this.text = get<string>(questionJson, 'text', '');
-		this.helpText = get<string>(questionJson, 'helpText', '');
-		this.isMultiValued = get<boolean>(questionJson, 'isMultiValued', false);
-		this.options = get<[]>(questionJson, 'options', []).map((option) => new EnquiryOption(option));
-		this.tags = get<string[]>(questionJson, 'tags', []);
-		this.optionListName = get<string>(questionJson, 'optionsListName', '');
+		this.path = get<string>(questionJson, 'path', '');
+		this.locale = get<string>(questionJson, 'locale', '');
+		this.hasAnswer = !!responseJson[this.name];
+    this.triggeredLines = get<string[]>(questionJson, 'triggeredLines', []); 
+    this.definition = get<{}>(questionJson, 'definition', []); 
 
 		//Setting and validating the answer
 		if (responseJson[this.name]) {
@@ -96,7 +133,7 @@ export class Question {
 					this.isSatisfied = true;
 				} else {
 					this.isSatisfied = false;
-					this.errorMsg = validate as string;
+					this.validationErrors = validate as string;
 				}
 			} else {
 				this.isSatisfied = true;

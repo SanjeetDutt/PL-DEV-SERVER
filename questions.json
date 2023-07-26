@@ -1,200 +1,1012 @@
 {
+	"enquiryId": "f5d6152a-7a33-4a21-aa29-804d9b7d1253",
+	"branch": "PLGroupBen",
+	"tag": "PL_WPB_v9",
+	"locale": "EN_US",
+	"availableLocales": ["EN_US"],
+	"effectiveDate": 1690243200000,
+	"isVoid": false,
+	"isSatisfied": false,
+	"isCloseable": false,
+	"isOpen": true,
+	"buckets": [],
 	"sections": [
 		{
-			"name": "Very first section",
+			"name": "Your Basic Details",
+			"isSatisfied": false,
+			"hasQuestions": true,
 			"enquiryLines": [
 				{
-					"_uid": "Your_Basic_Details",
+					"name": "Your_Basic_Details",
+					"path": "Your_Basic_Details",
+					"alias": "Your Basic Details",
+					"section": "Your Basic Details",
+					"preamble": "Please tell us your basic quote information",
+					"rawSection": "Your Basic Details",
+					"rawPreamble": "Please tell us your basic quote information",
 					"isSatisfied": false,
-					"path": "Your Basic Details",
-					"name": "Your Basic Details",
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": true,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Your Basic Details"],
+					"triggerQuestions": {},
 					"questions": [
 						{
-							"_uid": "SOURCE",
-							"isSatisfied": false,
-							"path": "SOURCE",
 							"name": "SOURCE",
-							"text": "Data source",
-							"helpText": "This is your first name we are fetching from Ben Admin, please update if not corect.<br />",
-							"isMultiValued": true,
-							"optionsListName": "SourceOptions",
-							"options": [
-								{
-									"_uid": "INITIAL",
-									"name": "INITIAL",
-									"text": "Initial application form"
-								},
-								{
-									"_uid": "BLOODS",
-									"name": "BLOODS",
-									"text": "Blood test"
-								},
-								{
-									"_uid": "EXAM",
-									"name": "EXAM",
-									"text": "Mini-screen"
+							"path": "SOURCE",
+							"locale": "EN_US",
+							"hasAnswer": true,
+							"isSatisfied": true,
+							"triggeredLines": [],
+							"answers": ["Initial application form"],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "SOURCE",
+								"text": "Data source",
+								"isMultiValued": true,
+								"tags": [],
+								"optionListName": "SourceOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Initial application form", "Blood test", "Mini-screen"],
+								"optionTags": {
+									"Mini-screen": [],
+									"Blood test": [],
+									"Initial application form": []
 								}
-							],
-							"tags": []
+							}
 						},
 						{
-							"_uid": "FIRSTNAME",
-							"isSatisfied": false,
-							"path": "FIRSTNAME",
-							"name": "FIRSTNAME",
-							"text": "First Name",
-							"helpText": "This is your first name we are fetching from Ben Admin, please update if not corect.<br />",
-							"isMultiValued": false,
-							"errorMsg": "Please enter first name.",
-							"options": [],
-							"tags": []
-						},
-						{
-							"_uid": "LASTNAME",
-							"isSatisfied": false,
-							"path": "LASTNAME",
-							"name": "LASTNAME",
-							"text": "Last Name",
-							"isMultiValued": false,
-							"options": [],
-							"tags": []
-						},
-						{
-							"_uid": "BIRTHDATE",
-							"isSatisfied": false,
-							"path": "BIRTHDATE",
-							"name": "BIRTHDATE",
-							"text": "Date of birth",
-							"isMultiValued": false,
-							"options": [],
-							"tags": ["datePicker"]
-						},
-						{
-							"type": "option",
-							"_uid": "GENDER",
-							"isSatisfied": false,
-							"path": "GENDER",
-							"name": "GENDER",
-							"text": "Sex of life assured",
-							"isMultiValued": false,
-							"optionsListName": "GenderOptions",
-							"options": [
-								{
-									"_uid": "MALE",
-									"name": "MALE",
-									"text": "Male"
-								},
-								{
-									"_uid": "FEMALE",
-									"name": "FEMALE",
-									"text": "Female"
-								}
-							],
-							"tags": []
-						},
-						{
-							"_uid": "EMAILID",
-							"isSatisfied": false,
-							"path": "EMAILID",
-							"name": "EMAILID",
-							"text": "Email Id",
-							"isMultiValued": false,
-							"options": [],
-							"tags": []
-						},
-						{
-							"_uid": "MOBILE",
-							"isSatisfied": false,
-							"path": "MOBILE",
-							"name": "MOBILE",
-							"text": "Mobile #",
-							"isMultiValued": false,
-							"options": [],
-							"tags": []
-						},
-						{
-							"_uid": "PRODUCT",
-							"isSatisfied": false,
-							"path": "PRODUCT",
 							"name": "PRODUCT",
-							"text": "Products included in the application",
-							"isMultiValued": true,
-							"optionsListName": "ProductOptions",
-							"options": [
-								{
-									"_uid": "LIFE",
-									"name": "LIFE",
-									"text": "Life"
-								},
-								{
-									"_uid": "CI",
-									"name": "CI",
-									"text": "Critical Illness"
-								},
-								{
-									"_uid": "IP",
-									"name": "IP",
-									"text": "Income Protection"
-								},
-								{
-									"_uid": "TPD",
-									"name": "TPD",
-									"text": "Total Permanent Disability"
-								},
-								{
-									"_uid": "WOP",
-									"name": "WOP",
-									"text": "Waiver of Premium"
+							"path": "PRODUCT",
+							"locale": "EN_US",
+							"hasAnswer": true,
+							"isSatisfied": true,
+							"triggeredLines": [],
+							"answers": ["Life"],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "PRODUCT",
+								"text": "Products included in the application",
+								"isMultiValued": true,
+								"tags": [],
+								"optionListName": "ProductOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Life", "Critical Illness", "Income Protection", "Total Permanent Disability", "Waiver of Premium"],
+								"optionTags": {
+									"Total Permanent Disability": [],
+									"Waiver of Premium": [],
+									"Life": [],
+									"Critical Illness": [],
+									"Income Protection": []
 								}
-							],
-							"tags": []
+							}
 						},
 						{
-							"_uid": "BASKET_LIFE_COVER",
-							"isSatisfied": false,
-							"path": "BASKET_LIFE_COVER",
+							"name": "SALES_CHANNEL",
+							"path": "SALES_CHANNEL",
+							"locale": "EN_US",
+							"hasAnswer": true,
+							"isSatisfied": true,
+							"triggeredLines": [],
+							"answers": ["Telephone"],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "SALES_CHANNEL",
+								"text": "What is the sales channel?",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "SalesChannelOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Telephone", "Direct"],
+								"optionTags": {
+									"Telephone": [],
+									"Direct": []
+								}
+							}
+						},
+						{
 							"name": "BASKET_LIFE_COVER",
-							"text": "Face Amount",
-							"isMultiValued": false,
-							"options": [],
-							"tags": ["currency"]
+							"path": "BASKET_LIFE_COVER",
+							"locale": "EN_US",
+							"hasAnswer": true,
+							"isSatisfied": true,
+							"triggeredLines": [],
+							"answers": ["111"],
+							"validationErrors": {},
+							"definition": {
+								"type": "INTEGER",
+								"name": "BASKET_LIFE_COVER",
+								"text": "Basket total life cover",
+								"isMultiValued": false,
+								"tags": ["DO_NOT_DISPLAY"],
+								"lowerBound": 0
+							}
 						},
 						{
-							"_uid": "EARNINGS",
+							"name": "TOTAL_LIFE_COVER",
+							"path": "TOTAL_LIFE_COVER",
+							"locale": "EN_US",
+							"hasAnswer": false,
 							"isSatisfied": false,
-							"path": "EARNINGS",
-							"name": "EARNINGS",
-							"text": "How much did you earn in the last year?",
-							"helpText": "This is your taxable income. You can include overtime, commission and bonuses but you can't include income from investments.<br />Don't include any income that would continue if you can't work<br />If you're self employed, please tell us your taxable income - in other words earnings after costs and before tax.<br />",
-							"isMultiValued": false,
-							"options": [],
-							"tags": ["currency"]
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "INTEGER",
+								"name": "TOTAL_LIFE_COVER",
+								"text": "Total amount of life cover",
+								"isMultiValued": false,
+								"tags": ["DO_NOT_DISPLAY"],
+								"lowerBound": 0
+							}
 						},
 						{
-							"_uid": "HIPAACONSENT",
+							"name": "GENDER",
+							"path": "GENDER",
+							"locale": "EN_US",
+							"hasAnswer": false,
 							"isSatisfied": false,
-							"path": "HIPAACONSENT",
-							"name": "HIPAACONSENT",
-							"text": "HIPAA Consent",
-							"isMultiValued": false,
-							"optionsListName": "HIPAAOptions",
-							"options": [
-								{
-									"_uid": "YES",
-									"name": "YES",
-									"text": "Yes"
-								},
-								{
-									"_uid": "NO",
-									"name": "NO",
-									"text": "No"
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "GENDER",
+								"text": "Sex of life assured",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "GenderOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Male", "Female"],
+								"optionTags": {
+									"Male": [],
+									"Female": []
 								}
-							],
-							"tags": []
+							}
+						},
+						{
+							"name": "BIRTHDATE",
+							"path": "BIRTHDATE",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "PAST_DATE",
+								"name": "BIRTHDATE",
+								"text": "Date of birth",
+								"isMultiValued": false,
+								"tags": [],
+								"isExact": false
+							}
+						},
+						{
+							"name": "MIB_PRESENT",
+							"path": "MIB_PRESENT",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "MIB_PRESENT",
+								"text": "Have MIB codes been passed to rules session?",
+								"isMultiValued": false,
+								"tags": ["DO_NOT_DISPLAY"],
+								"optionListName": "YesNo",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Yes", "No"],
+								"optionTags": {
+									"No": [],
+									"Yes": []
+								}
+							}
+						},
+						{
+							"name": "RX_PRESENT",
+							"path": "RX_PRESENT",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "RX_PRESENT",
+								"text": "Have RX codes been passed to rules session?",
+								"isMultiValued": false,
+								"tags": ["DO_NOT_DISPLAY"],
+								"optionListName": "YesNo",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Yes", "No"],
+								"optionTags": {
+									"No": [],
+									"Yes": []
+								}
+							}
 						}
-					]
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Residency and employment",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Residency_Work",
+					"path": "Residency_Work",
+					"alias": "Residency_Work",
+					"section": "Residency and employment",
+					"preamble": "Please answer the following:",
+					"rawSection": "Residency and employment",
+					"rawPreamble": "Please answer the following:",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Residency_Work"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "OCCUPATION",
+							"path": "OCCUPATION",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_BACKED",
+								"name": "OCCUPATION",
+								"text": "What is your job?",
+								"helpText": "This needs to be your main job - in other words, the one you spend most time doing. If you can't find your exact job, try describing your job differently, or pick the closest match.",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "Occupations",
+								"includedCategories": [],
+								"excludedCategories": ["Unrecognised"],
+								"isStrict": true,
+								"minSearchChars": 3
+							}
+						},
+						{
+							"name": "ANNUAL_SALARY",
+							"path": "ANNUAL_SALARY",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "NUMBER",
+								"name": "ANNUAL_SALARY",
+								"text": "Annual Salary:",
+								"isMultiValued": false,
+								"tags": [],
+								"lowerBound": 0
+							}
+						},
+						{
+							"name": "RESIDENCY",
+							"path": "RESIDENCY",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "RESIDENCY",
+								"text": "Do you live outside of the U.S? ",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "YesNo",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Yes", "No"],
+								"optionTags": {
+									"No": [],
+									"Yes": []
+								}
+							}
+						},
+						{
+							"name": "NON_US_WORK",
+							"path": "NON_US_WORK",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "NON_US_WORK",
+								"text": "Do you work outside the U.S? ",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "YesNo",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Yes", "No"],
+								"optionTags": {
+									"No": [],
+									"Yes": []
+								}
+							}
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Habits",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Habits",
+					"path": "Habits",
+					"alias": "Habits",
+					"section": "Habits",
+					"preamble": "Please answer the following",
+					"rawSection": "Habits",
+					"rawPreamble": "Please answer the following",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Habits"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "TOBACCO",
+							"path": "TOBACCO",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "TOBACCO",
+								"text": "Within the past 12-24 months have you used any tobacco products (such as cigarettes,\ncigars, snuff, dip, chew, or pipe), or any nicotine delivery system?",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "YesNo",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Yes", "No"],
+								"optionTags": {
+									"No": [],
+									"Yes": []
+								}
+							}
+						},
+						{
+							"name": "HEIGHT_FEET",
+							"path": "HEIGHT_FEET",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "INTEGER",
+								"name": "HEIGHT_FEET",
+								"text": "How tall are you in feet?",
+								"isMultiValued": false,
+								"tags": ["GROUP/HEIGHT"],
+								"lowerBound": 2,
+								"upperBound": 10
+							}
+						},
+						{
+							"name": "HEIGHT_INCHES",
+							"path": "HEIGHT_INCHES",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "INTEGER",
+								"name": "HEIGHT_INCHES",
+								"text": "How tall are you in inches?",
+								"isMultiValued": false,
+								"tags": ["GROUP/HEIGHT"],
+								"lowerBound": 0,
+								"upperBound": 12
+							}
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Last 2 years",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "PartA_2_Years",
+					"path": "PartA_2_Years",
+					"alias": "PartA_2_Years",
+					"section": "Last 2 years",
+					"preamble": "Within the past 2 years..",
+					"rawSection": "Last 2 years",
+					"rawPreamble": "Within the past 2 years..",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["PartA_2_Years"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "LAST_2_PROCEDURE",
+							"path": "LAST_2_PROCEDURE",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_2_PROCEDURE",
+								"text": "Have you had a medical professional's recommendation, or are you being considered for or scheduled for any of the following: (select all that apply)",
+								"helpText": "You do not need to include tests related to the Human Immunodeficiency Virus (HIV), Acquired Immune Deficiency Syndrome (AIDS),  AIDS Related Complex (ARC)",
+								"isMultiValued": true,
+								"tags": [],
+								"optionListName": "Last2_ProcedureOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Inpatient or outpatient medical procedure", "Inpatient or outpatient surgical procedure", "Inpatient or outpatient diagnostic procedure", "None of these"],
+								"optionTags": {
+									"None of these": ["EXCLUSIVE"],
+									"Inpatient or outpatient medical procedure": [],
+									"Inpatient or outpatient diagnostic procedure": [],
+									"Inpatient or outpatient surgical procedure": []
+								}
+							}
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Last 5 years",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "PartA_5_Years",
+					"path": "PartA_5_Years",
+					"alias": "PartA_5_Years",
+					"section": "Last 5 years",
+					"preamble": "In the past 5 years..",
+					"rawSection": "Last 5 years",
+					"rawPreamble": "In the past 5 years..",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["PartA_5_Years"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "LAST_5_DRIVING",
+							"path": "LAST_5_DRIVING",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_5_DRIVING",
+								"text": "Has your driver’s license been suspended or revoked?",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "YesNo",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Yes", "No"],
+								"optionTags": {
+									"No": [],
+									"Yes": []
+								}
+							}
+						},
+						{
+							"name": "LAST_5_TREATMENT",
+							"path": "LAST_5_TREATMENT",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_5_TREATMENT",
+								"text": "Have you been an inpatient or outpatient or treated at a hospital, clinic, or other medical facility?",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "YesNo",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Yes", "No"],
+								"optionTags": {
+									"No": [],
+									"Yes": []
+								}
+							}
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Last 10 years",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "PartA_10_Years",
+					"path": "PartA_10_Years",
+					"alias": "PartA_10_Years",
+					"section": "Last 10 years",
+					"preamble": "In the past 10 years..",
+					"rawSection": "Last 10 years",
+					"rawPreamble": "In the past 10 years..",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["PartA_10_Years"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "LAST_10_DRUG_USE",
+							"path": "LAST_10_DRUG_USE",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_10_DRUG_USE",
+								"text": "Except as prescribed by a physician, have you used any of the following: (select all that apply)",
+								"isMultiValued": true,
+								"tags": [],
+								"optionListName": "Last10_DrugOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Amphetamines", "Cocaine", "Ecstasy (MDMA)", "Hallucinogens", "Heroin", "Lysergic Acid Diethylamide (LSD)", "Methamphetamines", "Narcotics", "Opioids", "Phencyclidine (PCP)", "Sedatives", "None of these"],
+								"optionTags": {
+									"Phencyclidine (PCP)": [],
+									"Sedatives": [],
+									"Lysergic Acid Diethylamide (LSD)": [],
+									"Methamphetamines": [],
+									"Narcotics": [],
+									"Opioids": [],
+									"Amphetamines": [],
+									"Ecstasy (MDMA)": [],
+									"None of these": ["EXCLUSIVE"],
+									"Cocaine": [],
+									"Hallucinogens": [],
+									"Heroin": []
+								}
+							}
+						},
+						{
+							"name": "LAST_10_ALCOHOL",
+							"path": "LAST_10_ALCOHOL",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_10_ALCOHOL",
+								"text": "Have you received medical treatment or counseling for or been advised by a healthcare professional  for any of the following: (select all that apply)",
+								"isMultiValued": true,
+								"tags": [],
+								"optionListName": "Last10_AlcoholOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Reduce and/or discontinue the use of alcohol", "Reduce and/or discontinue the use of prescribed or non-prescribed drugs", "None of these"],
+								"optionTags": {
+									"Reduce and/or discontinue the use of alcohol": [],
+									"Reduce and/or discontinue the use of prescribed or non-prescribed drugs": [],
+									"None of these": ["EXCLUSIVE"]
+								}
+							}
+						},
+						{
+							"name": "LAST_10_HIV",
+							"path": "LAST_10_HIV",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_10_HIV",
+								"text": "Have you been diagnosed or treated by a healthcare professional or tested positive for any of the following: (select all that apply)",
+								"isMultiValued": true,
+								"tags": [],
+								"optionListName": "Last10_HIVOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Acquired Immune Deficiency Syndrome (AIDS)", "Human Immunodeficiency Virus (HIV)", "None of these"],
+								"optionTags": {
+									"Acquired Immune Deficiency Syndrome (AIDS)": [],
+									"Human Immunodeficiency Virus (HIV)": [],
+									"None of these": ["EXCLUSIVE"]
+								}
+							}
+						},
+						{
+							"name": "LAST_10_DRIVING",
+							"path": "LAST_10_DRIVING",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_10_DRIVING",
+								"text": "Pleaded guilty to or been convicted of driving while impaired, intoxicated, or under the influence of alcohol or any drug?",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "YesNo",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Yes", "No"],
+								"optionTags": {
+									"No": [],
+									"Yes": []
+								}
+							}
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Last 10 years cntd",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "PartB_10_Years",
+					"path": "PartB_10_Years",
+					"alias": "PartB_10_Years",
+					"section": "Last 10 years cntd",
+					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"rawSection": "Last 10 years cntd",
+					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["PartB_10_Years"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "LAST_10_HEART",
+							"path": "LAST_10_HEART",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_10_HEART",
+								"text": "Any disease or disorder of the heart or circulatory system including: (select all that apply)",
+								"isMultiValued": true,
+								"tags": [],
+								"optionListName": "Last10_HeartOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Uncontrolled hypertension", "Chest pain", "Heart attack", "Coronary artery disease", "Heart murmur", "Heart or valve surgery", "Irregular heart rhythm", "Stroke/Transient ischaemic attack (TIA)", "Congestive heart failure", "Cardiomyopathy", "None of these"],
+								"optionTags": {
+									"Irregular heart rhythm": [],
+									"Cardiomyopathy": [],
+									"Stroke/Transient ischaemic attack (TIA)": [],
+									"Chest pain": [],
+									"Heart or valve surgery": [],
+									"None of these": ["EXCLUSIVE"],
+									"Congestive heart failure": [],
+									"Coronary artery disease": [],
+									"Uncontrolled hypertension": [],
+									"Heart attack": [],
+									"Heart murmur": []
+								}
+							}
+						},
+						{
+							"name": "LAST_10_CANCER",
+							"path": "LAST_10_CANCER",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_10_CANCER",
+								"text": "Any of the following:",
+								"isMultiValued": true,
+								"tags": [],
+								"optionListName": "Last10_CancerOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Cancer", "Tumor", "Nodule", "Skin cancer (excluding basal cell carcinoma)", "Melanoma", "Hodgkin's disease", "Leukemia", "None of these"],
+								"optionTags": {
+									"Skin cancer (excluding basal cell carcinoma)": [],
+									"Leukemia": [],
+									"Melanoma": [],
+									"Tumor": [],
+									"None of these": ["EXCLUSIVE"],
+									"Nodule": [],
+									"Hodgkin's disease": [],
+									"Cancer": []
+								}
+							}
+						},
+						{
+							"name": "LAST_10_ENDO",
+							"path": "LAST_10_ENDO",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_10_ENDO",
+								"text": "Any of the following: (select all that apply)",
+								"isMultiValued": true,
+								"tags": [],
+								"optionListName": "Last10_EndoOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Blood disorder", "Diabetes or pre-diabetes", "Disease of adrenal gland", "Disease of pituitary gland", "None of these"],
+								"optionTags": {
+									"Blood disorder": [],
+									"Diabetes or pre-diabetes": [],
+									"Disease of adrenal gland": [],
+									"None of these": ["EXCLUSIVE"],
+									"Disease of pituitary gland": []
+								}
+							}
+						},
+						{
+							"name": "LAST_10_GITRACT",
+							"path": "LAST_10_GITRACT",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_10_GITRACT",
+								"text": "Any disorder or disease of the gastrointestinal system, liver, intestine, stomach, pancreas, rectum including: (select all that apply)",
+								"isMultiValued": true,
+								"tags": [],
+								"optionListName": "Last10_GITractOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Cirrhosis", "Crohn’s disease", "Fatty liver", "Hepatitis", "Ulcerative colitis", "Other disorder", "None of these"],
+								"optionTags": {
+									"Cirrhosis": [],
+									"Hepatitis": [],
+									"Fatty liver": [],
+									"None of these": ["EXCLUSIVE"],
+									"Other disorder": [],
+									"Crohn’s disease": [],
+									"Ulcerative colitis": []
+								}
+							}
+						},
+						{
+							"name": "LAST_10_RESPIRATORY",
+							"path": "LAST_10_RESPIRATORY",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_10_RESPIRATORY",
+								"text": "Any disorder or disease of the respiratory system including: (select all that apply)",
+								"isMultiValued": true,
+								"tags": [],
+								"optionListName": "Last10_RespOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Asthma", "Chronic obstructive pulmonary disease (COPD)", "Emphysema", "Sleep apnea", "None of these"],
+								"optionTags": {
+									"Chronic obstructive pulmonary disease (COPD)": [],
+									"None of these": ["EXCLUSIVE"],
+									"Sleep apnea": [],
+									"Emphysema": [],
+									"Asthma": []
+								}
+							}
+						},
+						{
+							"name": "LAST_10_CNS",
+							"path": "LAST_10_CNS",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_10_CNS",
+								"text": "Any disorder or disease of the brain or nervous system including: (select all that apply)",
+								"isMultiValued": true,
+								"tags": [],
+								"optionListName": "Last10_CNSOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Alzheimer's disease", "Amyotrophic lateral sclerosis (ALS)", "Epilepsy or seizure disorder", "Memory loss", "Multiple sclerosis", "Muscular dystrophy", "Paralysis", "Parkinson's disease", "Tremor", "None of these"],
+								"optionTags": {
+									"Multiple sclerosis": [],
+									"Parkinson's disease": [],
+									"Tremor": [],
+									"Amyotrophic lateral sclerosis (ALS)": [],
+									"Epilepsy or seizure disorder": [],
+									"None of these": ["EXCLUSIVE"],
+									"Paralysis": [],
+									"Alzheimer's disease": [],
+									"Memory loss": [],
+									"Muscular dystrophy": []
+								}
+							}
+						},
+						{
+							"name": "LAST_10_MENTAL_HEALTH",
+							"path": "LAST_10_MENTAL_HEALTH",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_10_MENTAL_HEALTH",
+								"text": "Any psychiatric or mental health disorder or disease including: (select all that apply)",
+								"isMultiValued": true,
+								"tags": [],
+								"optionListName": "Last10_MentalOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Anxiety", "Bipolar disorder", "Depression", "Eating disorder", "Post-traumatic stress", "Psychosis", "None of these"],
+								"optionTags": {
+									"Psychosis": [],
+									"Bipolar disorder": [],
+									"Depression": [],
+									"None of these": ["EXCLUSIVE"],
+									"Anxiety": [],
+									"Eating disorder": [],
+									"Post-traumatic stress": []
+								}
+							}
+						},
+						{
+							"name": "LAST_10_IMMUNE",
+							"path": "LAST_10_IMMUNE",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_10_IMMUNE",
+								"text": "Any disorder or disease of the immune system, systemic lupus, or other auto-immune disorders?",
+								"helpText": "You do not need to include those related to the Human Immunodeficiency Virus (HIV), Acquired Immune Deficiency Syndrome (AIDS),  AIDS Related Complex (ARC)",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "YesNo",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Yes", "No"],
+								"optionTags": {
+									"No": [],
+									"Yes": []
+								}
+							}
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
 				}
 			]
 		}
-	]
+	],
+	"allAnswers": {},
+	"debugInfo": {}
 }

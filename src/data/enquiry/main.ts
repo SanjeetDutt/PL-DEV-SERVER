@@ -13,7 +13,13 @@ const writeFile = async (fileName: string, data: object) => {
 };
 
 const getAllEnquiry = async (): Promise<{ [key: string]: enquiry }> => {
-	const data = await readFile(CONSTANTS.ENQUIRY_FILE);
+	let data = null;
+
+	while (!data) {
+		console.log('READING DATA');
+
+		data = await readFile(CONSTANTS.ENQUIRY_FILE);
+	}
 
 	return JSON.parse(data);
 };
@@ -105,7 +111,6 @@ export const newEnquiry = async (): Promise<string> => {
 export const getResponse = async (enquiryId: string): Promise<Enquiry> => {
 	const enquiryJSON = await getEnquiryById(enquiryId);
 	const questionsJSON = await getQuestion();
-
 	return new Enquiry(enquiryId, questionsJSON, enquiryJSON);
 };
 
