@@ -2,6 +2,7 @@ import bodyParser from 'body-parser';
 import express, { NextFunction, Request, Response } from 'express';
 
 import enquiryRoutes from './routes/enquiry';
+import persistanceRoute from './routes/persistance';
 
 const app = express();
 
@@ -20,6 +21,7 @@ const logRequest = (req: Request, response: Response, next: NextFunction) => {
 };
 
 app.use('/v4', enquiryRoutes);
+app.use('/persistance', persistanceRoute);
 
 app.use((error, req, res, next) => {
 	const status = error.status || 500;

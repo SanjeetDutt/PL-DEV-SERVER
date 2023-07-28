@@ -1,16 +1,7 @@
-import fs from 'node:fs/promises';
 import { CONSTANTS } from '../../routes/enquiry';
 import Enquiry, { Question } from './structure';
-
+import { readFile, writeFile } from '../../util/CommonFunctions';
 type enquiry = { [key: string]: string[] };
-
-const readFile = async (fileName: string) => {
-	return await fs.readFile(fileName, 'utf8');
-};
-
-const writeFile = async (fileName: string, data: object) => {
-	await fs.writeFile(fileName, JSON.stringify(data));
-};
 
 const getAllEnquiry = async (): Promise<{ [key: string]: enquiry }> => {
 	let data = null;
@@ -92,10 +83,12 @@ const getQuestionByName = async (questionName: string): Promise<Question | null>
  * Function to create a new enquiry id
  * @returns New generate id
  */
-export const newEnquiry = async (): Promise<string> => {
-	// Generate new enquiry id
-	const date = new Date();
-	const uid = date.getTime().toString();
+export const newEnquiry = async (uid = null): Promise<string> => {
+	if (uid === null) {
+		// Generate new enquiry id
+		const date = new Date();
+		uid = date.getTime().toString();
+	}
 
 	// Save enquiry id in response
 	saveEnquiry(uid, {});

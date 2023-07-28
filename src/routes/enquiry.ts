@@ -1,6 +1,6 @@
 import express, { NextFunction, Request, Response } from 'express';
 import { newEnquiry, getResponse, saveResponse } from '../data/enquiry/main';
-import fs from 'node:fs/promises';
+import {checkOrCreateFile} from "../util/CommonFunctions"
 
 const router = express.Router();
 
@@ -11,14 +11,6 @@ export const CONSTANTS = {
 	TAG: 'PL'
 };
 
-const checkOrCreateFile = async (fileName: string, defaultValue: string = '{}') => {
-	try {
-		await fs.readFile(fileName, 'utf8');
-	} catch {
-		// make new file
-		fs.writeFile(fileName, defaultValue);
-	}
-};
 
 checkOrCreateFile(CONSTANTS.ENQUIRY_FILE);
 checkOrCreateFile(CONSTANTS.QUESTION_FILE);
