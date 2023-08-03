@@ -92,12 +92,22 @@ const updateProgressTo = async (interviewID: string, stepCompleted: string): Pro
 	switch (stepCompleted) {
 		case PROGRESS_NAMES.ECONSENT:
 			persistance.interviewStatus.eConsent = true;
-			persistance.interviewStatus.currentStep = 'hipaa';
+
+			if (persistance.interviewStatus.eConsent && persistance.interviewStatus.hipaa) {
+				persistance.interviewStatus.currentStep = 'corrections';
+			} else {
+				persistance.interviewStatus.currentStep = 'hipaa';
+			}
+
 			break;
 
 		case PROGRESS_NAMES.HIPAA:
 			persistance.interviewStatus.hipaa = true;
-			persistance.interviewStatus.currentStep = 'corrections';
+			if (persistance.interviewStatus.eConsent && persistance.interviewStatus.hipaa) {
+				persistance.interviewStatus.currentStep = 'corrections';
+			} else {
+				persistance.interviewStatus.currentStep = 'hipaa';
+			}
 			break;
 
 		case PROGRESS_NAMES.CORRECTIONS:
@@ -125,18 +135,18 @@ const updateProgressTo = async (interviewID: string, stepCompleted: string): Pro
 	return persistance;
 };
 
-const completeEsign = async (interviewId:string):Promise<Persistance|null>=>{
-  const persistance = await getPersistanceById(interviewId)
+const completeEsign = async (interviewId: string): Promise<Persistance | null> => {
+	const persistance = await getPersistanceById(interviewId);
 
-  persistance.interviewStatus.esignature = true
-  await savePersistance(interviewId, persistance)
+	persistance.interviewStatus.esignature = true;
+	await savePersistance(interviewId, persistance);
 
-  return persistance
-}
+	return persistance;
+};
 
 export const persistanceUpdates = {
 	updateEmail,
 	updateSpouseEmail,
 	updateProgressTo,
-  completeEsign
+	completeEsign
 };
