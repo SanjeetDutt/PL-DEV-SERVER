@@ -11,9 +11,15 @@
 			}
 		],
 		"interviewStatus": {
-			"status": "",
+			"eConsent": false,
+			"hipaa": false,
+			"corrections": false,
+			"enquiry": false,
+			"esignature": false,
+			"status": "active",
 			"currentStep": ""
 		},
+		"corrections": {},
 		"limra": {
 			"transmissionGUID": "",
 			"senderName": "",
@@ -26,28 +32,28 @@
 			"employer": [
 				{
 					"employerPartyID": "",
-					"employerName": "Sanjeet Dutt",
+					"employerName": "",
 					"employee": [
 						{
 							"employeePartyID": "",
-							"employeeSocialSecurityNumber": "100-100-1234",
+							"employeeSocialSecurityNumber": "123-456-7890",
 							"employeeIdentifier": "",
 							"employeeName": {
 								"firstName": "Sanjeet",
 								"lastName": "Dutt"
 							},
 							"employeeGenderCode": "M",
-							"employeeBirthDate": "01/01/1900",
-							"employeeHomePhone": "9876544321",
-							"employeeWorkPhone": "9876543221",
+							"employeeBirthDate": "08/06/1995",
+							"employeeHomePhone": "9876543210",
+							"employeeWorkPhone": "9876543210",
 							"employeeMailingAddress": {
-								"firstLineAddress": "FIRST LINE",
-								"cityName": "CITY",
-								"stateProvinceCode": "STATE",
-								"postalCode": "345506",
-								"countryCode": "US"
+								"firstLineAddress": "ADD 1",
+								"cityName": "City",
+								"stateProvinceCode": "ST",
+								"postalCode": "12345",
+								"countryCode": "IN"
 							},
-							"employeeEmail": "abc@xyz.com",
+							"employeeEmail": "sanjeetdutt@gmail.com",
 							"employmentInformation": {
 								"originalHireDate": "",
 								"employmentTypeCode": "",
@@ -145,158 +151,6 @@
 			"buckets": [],
 			"debugInfo": {},
 			"enquiryId": "wz5jiy6qyy9-ezr8p8hv1a7-31zdojdzset-hy11ip6og6i-868j5ntay9v",
-			"branch": "PL",
-			"tag": "PL",
-			"sections": [],
-			"allAnswer": {}
-		}
-	},
-	"nny77rlv0lm-b2qqg249u8t-nnb81q8bhk-rjl6v1kf38q-uxkl2ruwkzf": {
-		"benAdminID": "1",
-		"entityType": "Employee",
-		"dependent": [
-			{
-				"dependentEoiID": "",
-				"dependentInterviewID": "",
-				"dependentRelationshipTypeCode": "",
-				"dependentEmail": ""
-			}
-		],
-		"interviewStatus": {
-			"status": "",
-			"currentStep": ""
-		},
-		"limra": {
-			"transmissionGUID": "",
-			"senderName": "",
-			"senderPlatformName": "",
-			"receiverName": "",
-			"creationDateTime": "",
-			"testProductionCode": "",
-			"transmissionTypeCode": "",
-			"schemaVersionIdentifier": "",
-			"employer": [
-				{
-					"employerPartyID": "",
-					"employerName": "",
-					"employee": [
-						{
-							"employeePartyID": "",
-							"employeeSocialSecurityNumber": "",
-							"employeeIdentifier": "",
-							"employeeName": {
-								"firstName": "",
-								"lastName": ""
-							},
-							"employeeGenderCode": "",
-							"employeeBirthDate": "",
-							"employeeHomePhone": "",
-							"employeeWorkPhone": "",
-							"employeeMailingAddress": {
-								"firstLineAddress": "",
-								"cityName": "",
-								"stateProvinceCode": "",
-								"postalCode": "",
-								"countryCode": ""
-							},
-							"employeeEmail": "",
-							"employmentInformation": {
-								"originalHireDate": "",
-								"employmentTypeCode": "",
-								"employmentStatusCode": "",
-								"employmentIncome": [
-									{
-										"incomeTypeCode": "",
-										"incomeModeCode": "",
-										"incomeEffectiveDate": ""
-									}
-								],
-								"employmentInformationUserDefinedCategory": []
-							},
-							"event": [
-								{
-									"eventID": "",
-									"eventTypeCode": "",
-									"eventTypeReasonCode": "",
-									"eventDate": "",
-									"enrollmentInformationID": []
-								}
-							],
-							"employeeEventID": [],
-							"dependent": [
-								{
-									"dependentPartyID": "",
-									"dependentSocialSecurityNumber": "",
-									"dependentName": {
-										"firstName": "",
-										"lastName": ""
-									},
-									"dependentRelationshipTypeCode": "",
-									"dependentGenderCode": "",
-									"dependentBirthDate": "",
-									"dependentMailingAddress": {
-										"firstLineAddress": "",
-										"cityName": "",
-										"stateProvinceCode": "",
-										"postalCode": "",
-										"countryCode": ""
-									},
-									"dependentEventID": []
-								}
-							],
-							"otherParty": [],
-							"beneficiaryGroup": [],
-							"producer": [],
-							"coverage": [
-								{
-									"coverageID": "",
-									"groupPolicyNumber": "",
-									"productTypeCode": "",
-									"benefitPlanIdentifier": "",
-									"benefitClassIdentifier": "",
-									"originalCoverageEffectiveDate": "",
-									"coverageEffectiveDate": "",
-									"coverageTierCode": "",
-									"benefitEarningsEffectiveDate": "",
-									"electedCoverage": {
-										"electedBenefitAmount": 0,
-										"electedCoverageInsured": [
-											{
-												"insuredPartyID": "",
-												"primaryInsuredIndicator": false,
-												"insuredCoverageEffectiveDate": ""
-											}
-										],
-										"electedCoverageRider": []
-									},
-									"coverageInsured": [
-										{
-											"insuredPartyID": "",
-											"primaryInsuredIndicator": false,
-											"insuredCoverageEffectiveDate": ""
-										}
-									],
-									"coverageEventID": []
-								}
-							],
-							"employeeForm": []
-						}
-					]
-				}
-			]
-		},
-		"interviewID": "nny77rlv0lm-b2qqg249u8t-nnb81q8bhk-rjl6v1kf38q-uxkl2ruwkzf",
-		"UME": {
-			"locale": "EN_US",
-			"availableLocale": ["EN_US"],
-			"effectiveDate": 1689033600000,
-			"isVoid": false,
-			"isSatisfied": true,
-			"isClosable": false,
-			"isOpen": true,
-			"buckets": [],
-			"debugInfo": {},
-			"enquiryId": "nny77rlv0lm-b2qqg249u8t-nnb81q8bhk-rjl6v1kf38q-uxkl2ruwkzf",
 			"branch": "PL",
 			"tag": "PL",
 			"sections": [],

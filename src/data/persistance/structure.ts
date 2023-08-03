@@ -1,12 +1,14 @@
 import Enquiry from '../enquiry/structure';
 
 export class Persistance {
-	benAdminID: string = '1';
+	benAdminID: string = '1'; // might be eoiID
 	interviewID: string;
 	entityType: string = 'Employee';
 	dependent: Dependent[] = [new Dependent()];
 	interviewStatus: InterviewStatus = new InterviewStatus();
-	corrections: {};
+	corrections: {
+		email?: string;
+	} = {};
 	limra: Limra = new Limra();
 	UME: Enquiry;
 
@@ -19,13 +21,18 @@ export class Persistance {
 export class Dependent {
 	dependentEoiID: string = '';
 	dependentInterviewID: string = '';
-	dependentRelationshipTypeCode: string = '';
+	dependentRelationshipTypeCode: string = ''; //["Child", "Grandchild", "Partner", "Spouse", "Other"]
 	dependentEmail: string = '';
 }
 
 export class InterviewStatus {
-	status: string = '';
-	currentStep: string = '';
+	eConsent: boolean = false;
+	hipaa: boolean = false;
+  enquiry: boolean = false;
+	corrections: boolean = false;
+	esignature: boolean = false;
+	status: 'active' | 'approved' | 'declined' | 'pending' = 'active';
+	currentStep: '' | 'eConsent' | 'hipaa' | 'corrections' | 'enquiry' | 'esignature' = '';
 }
 
 export class Limra {
@@ -56,7 +63,7 @@ export class Employee {
 	employeeSocialSecurityNumber: string = '';
 	employeeIdentifier: string = '';
 	employeeName: EmployeeName = new EmployeeName();
-	employeeGenderCode: string = '';
+	employeeGenderCode: 'Female' | 'Male' | 'NonBinary' | 'NotSpecified' | '' = '';
 	employeeBirthDate: string = '';
 	employeeHomePhone: string = '';
 	employeeWorkPhone: string = '';
