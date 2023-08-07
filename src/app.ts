@@ -8,7 +8,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use((req, res, next) => {
+app.use((req:Request, res:Response, next:NextFunction) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PATCH,DELETE');
 	res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -23,7 +23,7 @@ const logRequest = (req: Request, response: Response, next: NextFunction) => {
 app.use('/v4', enquiryRoutes);
 app.use('/persistance', persistanceRoute);
 
-app.use((error, req, res, next) => {
+app.use((error, req:Request, res:Response, next:NextFunction) => {
 	const status = error.status || 500;
 	const message = error.message || 'Something went wrong.';
 	res.status(status).json({ message: message });

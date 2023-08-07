@@ -13,17 +13,17 @@ const getAllPersistance = async (): Promise<{ [key: string]: Persistance }> => {
 };
 
 const getPersistanceById = async (id: string): Promise<Persistance | null> => {
-	const persistances = await getAllPersistance();
+	const persistance = await getAllPersistance();
 
-	if (persistances && persistances[id]) return persistances[id];
+	if (persistance && persistance[id]) return persistance[id];
 
 	return null;
 };
 
 const savePersistance = async (interviewId: string, persistance: Persistance) => {
-	const persistances = await getAllPersistance();
-	persistances[interviewId] = persistance;
-	await writeFile(CONSTANTS.PERSISTANCE_FILE, persistances);
+	const persistencies = await getAllPersistance();
+	persistencies[interviewId] = persistance;
+	await writeFile(CONSTANTS.PERSISTANCE_FILE, persistencies);
 };
 
 export const createNewInterviewId = (): string => {
@@ -88,7 +88,7 @@ export const PROGRESS_NAMES = {
 // This function will update the completed step bool to true and put next step in the current step
 const updateProgressTo = async (interviewID: string, stepCompleted: string): Promise<Persistance | null> => {
 	const persistance = await getPersistanceById(interviewID);
-	// update the step and return the upated schema
+	// update the step and return the updated schema
 	switch (stepCompleted) {
 		case PROGRESS_NAMES.ECONSENT:
 			persistance.interviewStatus.eConsent = true;

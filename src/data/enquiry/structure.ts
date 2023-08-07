@@ -105,29 +105,29 @@ export class EnquiryLine {
 }
 
 export class Question {
-  name: string;
-  path: string;
-  locale:string;
-  hasAnswer: boolean;
+	name: string;
+	path: string;
+	locale: string;
+	hasAnswer: boolean;
 	isSatisfied: boolean = false;
-  triggeredLines: string[];
-	answer: string[] = [];
-	validationErrors:{};
-  definition: {};
+	triggeredLines: string[];
+	answers: string[] = [];
+	validationErrors: {};
+	definition: {};
 
 	constructor(questionJson: {}, responseJson: {}) {
 		this.name = get<string>(questionJson, 'name', '');
 		this.path = get<string>(questionJson, 'path', '');
 		this.locale = get<string>(questionJson, 'locale', '');
 		this.hasAnswer = !!responseJson[this.name];
-    this.triggeredLines = get<string[]>(questionJson, 'triggeredLines', []); 
-    this.definition = get<{}>(questionJson, 'definition', []); 
+		this.triggeredLines = get<string[]>(questionJson, 'triggeredLines', []);
+		this.definition = get<{}>(questionJson, 'definition', []);
 
 		//Setting and validating the answer
 		if (responseJson[this.name]) {
-			this.answer = responseJson[this.name];
+			this.answers = responseJson[this.name];
 			if (validation[this.name]) {
-				const validate: string | boolean = validation[this.name](this.answer);
+				const validate: string | boolean = validation[this.name](this.answers);
 
 				if (validate === true) {
 					this.isSatisfied = true;

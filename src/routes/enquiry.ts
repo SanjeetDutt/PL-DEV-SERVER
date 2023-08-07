@@ -27,7 +27,7 @@ router.post('/startEnquiry', async (req: Request, res: Response, next: NextFunct
 });
 
 // Call to create a new enquiry
-router.get('/getEnquiry/:enquiryId', async (req: Request<{ enquiryId: string }, {}, {}>, res: Response, next: NextFunction) => {
+router.get('/enquiry/:enquiryId', async (req: Request<{ enquiryId: string }, {}, {}>, res: Response, next: NextFunction) => {
 	try {
 		const enquiryResponse = await getResponse(req.params.enquiryId);
 		res.status(200).json(enquiryResponse);
@@ -36,16 +36,16 @@ router.get('/getEnquiry/:enquiryId', async (req: Request<{ enquiryId: string }, 
 	}
 });
 
-type postBobyType = {
-	answer: { [key: string]: string[] };
+type postBodyType = {
+	answers: { [key: string]: string[] };
 	locale: string;
 	username: string;
 	debug: boolean;
 };
 // Post the response of a question
-router.post('/enquiry/:enquiryId', async (req: Request<{ enquiryId: string }, {}, postBobyType>, res: Response, next: NextFunction) => {
+router.post('/enquiry/:enquiryId', async (req: Request<{ enquiryId: string }, {}, postBodyType>, res: Response, next: NextFunction) => {
 	const enquiryId = req.params.enquiryId;
-	const responses = req.body.answer;
+	const responses = req.body.answers;
 
 	for (const questionName of Object.keys(responses)) {
 		if (!(await saveResponse(enquiryId, questionName, responses[questionName]))) {

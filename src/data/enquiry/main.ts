@@ -24,12 +24,12 @@ const getEnquiryById = async (id: string): Promise<enquiry> => {
 };
 
 const saveEnquiry = async (enquiryId: string, enquiry: enquiry) => {
-	const enquries = await getAllEnquiry();
-	enquries[enquiryId] = enquiry;
-	writeFile(CONSTANTS.ENQUIRY_FILE, enquries);
+	const enquires = await getAllEnquiry();
+	enquires[enquiryId] = enquiry;
+	writeFile(CONSTANTS.ENQUIRY_FILE, enquires);
 };
 
-type QuesetionJson = {
+type QuestionJson = {
 	section: {
 		name: string;
 		enquiryLines: {
@@ -55,7 +55,7 @@ type QuesetionJson = {
 	}[];
 };
 
-const getQuestion = async (): Promise<QuesetionJson> => {
+const getQuestion = async (): Promise<QuestionJson> => {
 	const data = await readFile(CONSTANTS.QUESTION_FILE);
 	return JSON.parse(data);
 };
@@ -97,9 +97,9 @@ export const newEnquiry = async (uid = null): Promise<string> => {
 };
 
 /**
- * Function to convert a vaild enquiry id into reponse
+ * Function to convert a valid enquiry id into response
  * @param enquiryId Need a valid enquiry id
- * @returns Will return the question and user response in mixed formate from UME and Rahul Responses
+ * @returns Will return the question and user response
  */
 export const getResponse = async (enquiryId: string): Promise<Enquiry> => {
 	const enquiryJSON = await getEnquiryById(enquiryId);

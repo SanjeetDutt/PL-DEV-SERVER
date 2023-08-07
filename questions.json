@@ -1,10 +1,10 @@
 {
-	"enquiryId": "f5d6152a-7a33-4a21-aa29-804d9b7d1253",
+	"enquiryId": "0a2b82b5-2569-45ad-b39e-288d88fc7fc6",
 	"branch": "PLGroupBen",
-	"tag": "PL_WPB_v9",
+	"tag": "EOI_Refinement_v7",
 	"locale": "EN_US",
 	"availableLocales": ["EN_US"],
-	"effectiveDate": 1690243200000,
+	"effectiveDate": 1691020800000,
 	"isVoid": false,
 	"isSatisfied": false,
 	"isCloseable": false,
@@ -95,7 +95,7 @@
 							"hasAnswer": true,
 							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": ["Telephone"],
+							"answers": ["Direct"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
@@ -120,7 +120,7 @@
 							"hasAnswer": true,
 							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": ["111"],
+							"answers": ["10000"],
 							"validationErrors": {},
 							"definition": {
 								"type": "INTEGER",
@@ -135,10 +135,10 @@
 							"name": "TOTAL_LIFE_COVER",
 							"path": "TOTAL_LIFE_COVER",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["10000"],
 							"validationErrors": {},
 							"definition": {
 								"type": "INTEGER",
@@ -249,18 +249,16 @@
 			]
 		},
 		{
-			"name": "Residency and employment",
+			"name": "Citizenship",
 			"isSatisfied": false,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
-					"name": "Residency_Work",
-					"path": "Residency_Work",
-					"alias": "Residency_Work",
-					"section": "Residency and employment",
-					"preamble": "Please answer the following:",
-					"rawSection": "Residency and employment",
-					"rawPreamble": "Please answer the following:",
+					"name": "Citizenship",
+					"path": "Citizenship",
+					"alias": "Citizenship",
+					"section": "Citizenship",
+					"rawSection": "Citizenship",
 					"isSatisfied": false,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
@@ -268,53 +266,12 @@
 					"isRoot": false,
 					"isForced": false,
 					"tags": [],
-					"triggers": ["Residency_Work"],
+					"triggers": ["Citizenship"],
 					"triggerQuestions": {},
 					"questions": [
 						{
-							"name": "OCCUPATION",
-							"path": "OCCUPATION",
-							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
-							"triggeredLines": [],
-							"answers": [],
-							"validationErrors": {},
-							"definition": {
-								"type": "OPTION_BACKED",
-								"name": "OCCUPATION",
-								"text": "What is your job?",
-								"helpText": "This needs to be your main job - in other words, the one you spend most time doing. If you can't find your exact job, try describing your job differently, or pick the closest match.",
-								"isMultiValued": false,
-								"tags": [],
-								"optionListName": "Occupations",
-								"includedCategories": [],
-								"excludedCategories": ["Unrecognised"],
-								"isStrict": true,
-								"minSearchChars": 3
-							}
-						},
-						{
-							"name": "ANNUAL_SALARY",
-							"path": "ANNUAL_SALARY",
-							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
-							"triggeredLines": [],
-							"answers": [],
-							"validationErrors": {},
-							"definition": {
-								"type": "NUMBER",
-								"name": "ANNUAL_SALARY",
-								"text": "Annual Salary:",
-								"isMultiValued": false,
-								"tags": [],
-								"lowerBound": 0
-							}
-						},
-						{
-							"name": "RESIDENCY",
-							"path": "RESIDENCY",
+							"name": "CITIZENSHIP",
+							"path": "CITIZENSHIP",
 							"locale": "EN_US",
 							"hasAnswer": false,
 							"isSatisfied": false,
@@ -323,33 +280,8 @@
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
-								"name": "RESIDENCY",
-								"text": "Do you live outside of the U.S? ",
-								"isMultiValued": false,
-								"tags": [],
-								"optionListName": "YesNo",
-								"includedCategories": [],
-								"excludedCategories": [],
-								"options": ["Yes", "No"],
-								"optionTags": {
-									"No": [],
-									"Yes": []
-								}
-							}
-						},
-						{
-							"name": "NON_US_WORK",
-							"path": "NON_US_WORK",
-							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
-							"triggeredLines": [],
-							"answers": [],
-							"validationErrors": {},
-							"definition": {
-								"type": "OPTION_GROUP",
-								"name": "NON_US_WORK",
-								"text": "Do you work outside the U.S? ",
+								"name": "CITIZENSHIP",
+								"text": "Are you a U.S. Citizen?",
 								"isMultiValued": false,
 								"tags": [],
 								"optionListName": "YesNo",
@@ -369,18 +301,16 @@
 			]
 		},
 		{
-			"name": "Habits",
+			"name": "Height",
 			"isSatisfied": false,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
-					"name": "Habits",
-					"path": "Habits",
-					"alias": "Habits",
-					"section": "Habits",
-					"preamble": "Please answer the following",
-					"rawSection": "Habits",
-					"rawPreamble": "Please answer the following",
+					"name": "Build_Height",
+					"path": "Build_Height",
+					"alias": "Your height",
+					"section": "Height",
+					"rawSection": "Height",
 					"isSatisfied": false,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
@@ -388,34 +318,9 @@
 					"isRoot": false,
 					"isForced": false,
 					"tags": [],
-					"triggers": ["Habits"],
+					"triggers": ["Your height"],
 					"triggerQuestions": {},
 					"questions": [
-						{
-							"name": "TOBACCO",
-							"path": "TOBACCO",
-							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
-							"triggeredLines": [],
-							"answers": [],
-							"validationErrors": {},
-							"definition": {
-								"type": "OPTION_GROUP",
-								"name": "TOBACCO",
-								"text": "Within the past 12-24 months have you used any tobacco products (such as cigarettes,\ncigars, snuff, dip, chew, or pipe), or any nicotine delivery system?",
-								"isMultiValued": false,
-								"tags": [],
-								"optionListName": "YesNo",
-								"includedCategories": [],
-								"excludedCategories": [],
-								"options": ["Yes", "No"],
-								"optionTags": {
-									"No": [],
-									"Yes": []
-								}
-							}
-						},
 						{
 							"name": "HEIGHT_FEET",
 							"path": "HEIGHT_FEET",
@@ -428,7 +333,7 @@
 							"definition": {
 								"type": "INTEGER",
 								"name": "HEIGHT_FEET",
-								"text": "How tall are you in feet?",
+								"text": "Please provide your current height:",
 								"isMultiValued": false,
 								"tags": ["GROUP/HEIGHT"],
 								"lowerBound": 2,
@@ -447,7 +352,7 @@
 							"definition": {
 								"type": "INTEGER",
 								"name": "HEIGHT_INCHES",
-								"text": "How tall are you in inches?",
+								"text": "Please provide your current height:",
 								"isMultiValued": false,
 								"tags": ["GROUP/HEIGHT"],
 								"lowerBound": 0,
@@ -461,18 +366,16 @@
 			]
 		},
 		{
-			"name": "Last 2 years",
+			"name": "Tobacco and nicotine",
 			"isSatisfied": false,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
-					"name": "PartA_2_Years",
-					"path": "PartA_2_Years",
-					"alias": "PartA_2_Years",
-					"section": "Last 2 years",
-					"preamble": "Within the past 2 years..",
-					"rawSection": "Last 2 years",
-					"rawPreamble": "Within the past 2 years..",
+					"name": "Tobacco_Nicotine",
+					"path": "Tobacco_Nicotine",
+					"alias": "Your tobacco and nicotine use",
+					"section": "Tobacco and nicotine",
+					"rawSection": "Tobacco and nicotine",
 					"isSatisfied": false,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
@@ -480,7 +383,217 @@
 					"isRoot": false,
 					"isForced": false,
 					"tags": [],
-					"triggers": ["PartA_2_Years"],
+					"triggers": ["Your tobacco and nicotine use"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "TOBACCO",
+							"path": "TOBACCO",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "TOBACCO",
+								"text": "Within the past 24 months have you used any tobacco products (such as cigarettes,\ncigars, snuff, dip, chew, or pipe), or any nicotine delivery system?",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "YesNo",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Yes", "No"],
+								"optionTags": {
+									"No": [],
+									"Yes": []
+								}
+							}
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Violations (5 years)",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Last5_Driving",
+					"path": "Last5_Driving",
+					"alias": "Violations",
+					"section": "Violations (5 years)",
+					"rawSection": "Violations (5 years)",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Violations"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "LAST_5_DRIVING",
+							"path": "LAST_5_DRIVING",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_5_DRIVING",
+								"text": "In the past 5 years has your driver’s license been suspended or revoked?",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "YesNo",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Yes", "No"],
+								"optionTags": {
+									"No": [],
+									"Yes": []
+								}
+							}
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Violations (10 years)",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Last10_Driving",
+					"path": "Last10_Driving",
+					"alias": "Violations",
+					"section": "Violations (10 years)",
+					"rawSection": "Violations (10 years)",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Violations"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "LAST_10_DRIVING",
+							"path": "LAST_10_DRIVING",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_10_DRIVING",
+								"text": "In the past 10 years, have you pleaded guilty to or been convicted of driving while impaired, intoxicated, or under the influence of alcohol or any drug?",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "YesNo",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Yes", "No"],
+								"optionTags": {
+									"No": [],
+									"Yes": []
+								}
+							}
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Treatment (5 years)",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Last5_Treatment",
+					"path": "Last5_Treatment",
+					"alias": "Treatment",
+					"section": "Treatment (5 years)",
+					"rawSection": "Treatment (5 years)",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Treatment"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "LAST_5_TREATMENT",
+							"path": "LAST_5_TREATMENT",
+							"locale": "EN_US",
+							"hasAnswer": false,
+							"isSatisfied": false,
+							"triggeredLines": [],
+							"answers": [],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_5_TREATMENT",
+								"text": "In the past 5 years, have you been an inpatient or outpatient or treated at a hospital, clinic, or other medical facility?",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "YesNo",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Yes", "No"],
+								"optionTags": {
+									"No": [],
+									"Yes": []
+								}
+							}
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Procedures (2 years)",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Last2_Procedure",
+					"path": "Last2_Procedure",
+					"alias": "Procedures",
+					"section": "Procedures (2 years)",
+					"preamble": "",
+					"rawSection": "Procedures (2 years)",
+					"rawPreamble": "",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Procedures"],
 					"triggerQuestions": {},
 					"questions": [
 						{
@@ -495,7 +608,7 @@
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_2_PROCEDURE",
-								"text": "Have you had a medical professional's recommendation, or are you being considered for or scheduled for any of the following: (select all that apply)",
+								"text": "Within the past 24 months have you had a medical professional's recommendation, or are you being considered for or scheduled for any of the following? (Select all that apply)",
 								"helpText": "You do not need to include tests related to the Human Immunodeficiency Virus (HIV), Acquired Immune Deficiency Syndrome (AIDS),  AIDS Related Complex (ARC)",
 								"isMultiValued": true,
 								"tags": [],
@@ -518,18 +631,16 @@
 			]
 		},
 		{
-			"name": "Last 5 years",
+			"name": "Drug use (10 years)",
 			"isSatisfied": false,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
-					"name": "PartA_5_Years",
-					"path": "PartA_5_Years",
-					"alias": "PartA_5_Years",
-					"section": "Last 5 years",
-					"preamble": "In the past 5 years..",
-					"rawSection": "Last 5 years",
-					"rawPreamble": "In the past 5 years..",
+					"name": "Last10_Drugs",
+					"path": "Last10_Drugs",
+					"alias": "Drug Use",
+					"section": "Drug use (10 years)",
+					"rawSection": "Drug use (10 years)",
 					"isSatisfied": false,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
@@ -537,86 +648,7 @@
 					"isRoot": false,
 					"isForced": false,
 					"tags": [],
-					"triggers": ["PartA_5_Years"],
-					"triggerQuestions": {},
-					"questions": [
-						{
-							"name": "LAST_5_DRIVING",
-							"path": "LAST_5_DRIVING",
-							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
-							"triggeredLines": [],
-							"answers": [],
-							"validationErrors": {},
-							"definition": {
-								"type": "OPTION_GROUP",
-								"name": "LAST_5_DRIVING",
-								"text": "Has your driver’s license been suspended or revoked?",
-								"isMultiValued": false,
-								"tags": [],
-								"optionListName": "YesNo",
-								"includedCategories": [],
-								"excludedCategories": [],
-								"options": ["Yes", "No"],
-								"optionTags": {
-									"No": [],
-									"Yes": []
-								}
-							}
-						},
-						{
-							"name": "LAST_5_TREATMENT",
-							"path": "LAST_5_TREATMENT",
-							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
-							"triggeredLines": [],
-							"answers": [],
-							"validationErrors": {},
-							"definition": {
-								"type": "OPTION_GROUP",
-								"name": "LAST_5_TREATMENT",
-								"text": "Have you been an inpatient or outpatient or treated at a hospital, clinic, or other medical facility?",
-								"isMultiValued": false,
-								"tags": [],
-								"optionListName": "YesNo",
-								"includedCategories": [],
-								"excludedCategories": [],
-								"options": ["Yes", "No"],
-								"optionTags": {
-									"No": [],
-									"Yes": []
-								}
-							}
-						}
-					],
-					"buckets": [],
-					"staticallyTriggeredLines": []
-				}
-			]
-		},
-		{
-			"name": "Last 10 years",
-			"isSatisfied": false,
-			"hasQuestions": true,
-			"enquiryLines": [
-				{
-					"name": "PartA_10_Years",
-					"path": "PartA_10_Years",
-					"alias": "PartA_10_Years",
-					"section": "Last 10 years",
-					"preamble": "In the past 10 years..",
-					"rawSection": "Last 10 years",
-					"rawPreamble": "In the past 10 years..",
-					"isSatisfied": false,
-					"hasQuestions": true,
-					"isWrapUpLine": false,
-					"isGlobal": true,
-					"isRoot": false,
-					"isForced": false,
-					"tags": [],
-					"triggers": ["PartA_10_Years"],
+					"triggers": ["Drug Use"],
 					"triggerQuestions": {},
 					"questions": [
 						{
@@ -631,7 +663,7 @@
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_DRUG_USE",
-								"text": "Except as prescribed by a physician, have you used any of the following: (select all that apply)",
+								"text": "In the past 10 years, have you used any of the following, except as prescribed by a physician? (Select all that apply)",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_DrugOptions",
@@ -653,7 +685,34 @@
 									"Heroin": []
 								}
 							}
-						},
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Alcohol (10 years)",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Last10_Alcohol",
+					"path": "Last10_Alcohol",
+					"alias": "Alcohol",
+					"section": "Alcohol (10 years)",
+					"rawSection": "Alcohol (10 years)",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Alcohol"],
+					"triggerQuestions": {},
+					"questions": [
 						{
 							"name": "LAST_10_ALCOHOL",
 							"path": "LAST_10_ALCOHOL",
@@ -666,7 +725,7 @@
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_ALCOHOL",
-								"text": "Have you received medical treatment or counseling for or been advised by a healthcare professional  for any of the following: (select all that apply)",
+								"text": "In the past 10 years, have you received medical treatment or counseling for, or been advised by a healthcare professional about any of the following: (Select all that apply)",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_AlcoholOptions",
@@ -679,7 +738,34 @@
 									"None of these": ["EXCLUSIVE"]
 								}
 							}
-						},
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "HIV & AIDS (10 years)",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Last10_HIV",
+					"path": "Last10_HIV",
+					"alias": "HIV and AIDS",
+					"section": "HIV & AIDS (10 years)",
+					"rawSection": "HIV & AIDS (10 years)",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["HIV and AIDS"],
+					"triggerQuestions": {},
+					"questions": [
 						{
 							"name": "LAST_10_HIV",
 							"path": "LAST_10_HIV",
@@ -692,7 +778,7 @@
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_HIV",
-								"text": "Have you been diagnosed or treated by a healthcare professional or tested positive for any of the following: (select all that apply)",
+								"text": "In the past 10 years, have you been diagnosed or tested positive for any of the following? (Select all that apply)",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_HIVOptions",
@@ -705,31 +791,6 @@
 									"None of these": ["EXCLUSIVE"]
 								}
 							}
-						},
-						{
-							"name": "LAST_10_DRIVING",
-							"path": "LAST_10_DRIVING",
-							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
-							"triggeredLines": [],
-							"answers": [],
-							"validationErrors": {},
-							"definition": {
-								"type": "OPTION_GROUP",
-								"name": "LAST_10_DRIVING",
-								"text": "Pleaded guilty to or been convicted of driving while impaired, intoxicated, or under the influence of alcohol or any drug?",
-								"isMultiValued": false,
-								"tags": [],
-								"optionListName": "YesNo",
-								"includedCategories": [],
-								"excludedCategories": [],
-								"options": ["Yes", "No"],
-								"optionTags": {
-									"No": [],
-									"Yes": []
-								}
-							}
 						}
 					],
 					"buckets": [],
@@ -738,18 +799,18 @@
 			]
 		},
 		{
-			"name": "Last 10 years cntd",
+			"name": "Heart and circulatory (10 years)",
 			"isSatisfied": false,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
-					"name": "PartB_10_Years",
-					"path": "PartB_10_Years",
-					"alias": "PartB_10_Years",
-					"section": "Last 10 years cntd",
-					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
-					"rawSection": "Last 10 years cntd",
-					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"name": "Last10_Heart",
+					"path": "Last10_Heart",
+					"alias": "Heart and circulatory system",
+					"section": "Heart and circulatory (10 years)",
+					"preamble": "In the past 10 years, have you been diagnosed, treated, hospitalized, prescribed medication for, or given medical advice by a physician or healthcare provider to seek treatment for:",
+					"rawSection": "Heart and circulatory (10 years)",
+					"rawPreamble": "In the past 10 years, have you been diagnosed, treated, hospitalized, prescribed medication for, or given medical advice by a physician or healthcare provider to seek treatment for:",
 					"isSatisfied": false,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
@@ -757,7 +818,7 @@
 					"isRoot": false,
 					"isForced": false,
 					"tags": [],
-					"triggers": ["PartB_10_Years"],
+					"triggers": ["Heart and circulatory system"],
 					"triggerQuestions": {},
 					"questions": [
 						{
@@ -772,7 +833,7 @@
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_HEART",
-								"text": "Any disease or disorder of the heart or circulatory system including: (select all that apply)",
+								"text": "Any disease or disorder of the heart or circulatory system? (Select all that apply)",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_HeartOptions",
@@ -793,7 +854,36 @@
 									"Heart murmur": []
 								}
 							}
-						},
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Cancers and tumors (10 years)",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Last10_Cancer",
+					"path": "Last10_Cancer",
+					"alias": "Cancers and tumors",
+					"section": "Cancers and tumors (10 years)",
+					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"rawSection": "Cancers and tumors (10 years)",
+					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Cancers and tumors"],
+					"triggerQuestions": {},
+					"questions": [
 						{
 							"name": "LAST_10_CANCER",
 							"path": "LAST_10_CANCER",
@@ -806,7 +896,7 @@
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_CANCER",
-								"text": "Any of the following:",
+								"text": "Any of the following? (Select all that apply)",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_CancerOptions",
@@ -824,7 +914,36 @@
 									"Cancer": []
 								}
 							}
-						},
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Endocrine system (10 years)",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Last10_Endo",
+					"path": "Last10_Endo",
+					"alias": "Endocrine system",
+					"section": "Endocrine system (10 years)",
+					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"rawSection": "Endocrine system (10 years)",
+					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Endocrine system"],
+					"triggerQuestions": {},
+					"questions": [
 						{
 							"name": "LAST_10_ENDO",
 							"path": "LAST_10_ENDO",
@@ -837,7 +956,7 @@
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_ENDO",
-								"text": "Any of the following: (select all that apply)",
+								"text": "Any of the following? (Select all that apply)",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_EndoOptions",
@@ -852,7 +971,36 @@
 									"Disease of pituitary gland": []
 								}
 							}
-						},
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Gastrointestinal tract (10 years)",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Last10_GITract",
+					"path": "Last10_GITract",
+					"alias": "Gastrointestinal tract",
+					"section": "Gastrointestinal tract (10 years)",
+					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"rawSection": "Gastrointestinal tract (10 years)",
+					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Gastrointestinal tract"],
+					"triggerQuestions": {},
+					"questions": [
 						{
 							"name": "LAST_10_GITRACT",
 							"path": "LAST_10_GITRACT",
@@ -865,7 +1013,7 @@
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_GITRACT",
-								"text": "Any disorder or disease of the gastrointestinal system, liver, intestine, stomach, pancreas, rectum including: (select all that apply)",
+								"text": "Any disorder or disease of the gastrointestinal system, liver, intestine, stomach, pancreas or rectum? (Select all that apply)",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_GITractOptions",
@@ -882,7 +1030,36 @@
 									"Ulcerative colitis": []
 								}
 							}
-						},
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Respiratory system (10 years)",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Last10_Resp",
+					"path": "Last10_Resp",
+					"alias": "Respiratory system",
+					"section": "Respiratory system (10 years)",
+					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"rawSection": "Respiratory system (10 years)",
+					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Respiratory system"],
+					"triggerQuestions": {},
+					"questions": [
 						{
 							"name": "LAST_10_RESPIRATORY",
 							"path": "LAST_10_RESPIRATORY",
@@ -895,7 +1072,7 @@
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_RESPIRATORY",
-								"text": "Any disorder or disease of the respiratory system including: (select all that apply)",
+								"text": "Any disorder or disease of the respiratory system? (Select all that apply)",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_RespOptions",
@@ -910,7 +1087,36 @@
 									"Asthma": []
 								}
 							}
-						},
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Brain and nervous system (10 years)",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Last10_CNS",
+					"path": "Last10_CNS",
+					"alias": "Brain and nervous system",
+					"section": "Brain and nervous system (10 years)",
+					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"rawSection": "Brain and nervous system (10 years)",
+					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Brain and nervous system"],
+					"triggerQuestions": {},
+					"questions": [
 						{
 							"name": "LAST_10_CNS",
 							"path": "LAST_10_CNS",
@@ -943,7 +1149,36 @@
 									"Muscular dystrophy": []
 								}
 							}
-						},
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Mental health (10 years)",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Last10_MentalHealth",
+					"path": "Last10_MentalHealth",
+					"alias": "Mental health",
+					"section": "Mental health (10 years)",
+					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"rawSection": "Mental health (10 years)",
+					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Mental health"],
+					"triggerQuestions": {},
+					"questions": [
 						{
 							"name": "LAST_10_MENTAL_HEALTH",
 							"path": "LAST_10_MENTAL_HEALTH",
@@ -956,7 +1191,7 @@
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_MENTAL_HEALTH",
-								"text": "Any psychiatric or mental health disorder or disease including: (select all that apply)",
+								"text": "Any psychiatric or mental health disorder or disease? (Select all that apply)",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_MentalOptions",
@@ -973,7 +1208,36 @@
 									"Post-traumatic stress": []
 								}
 							}
-						},
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Immune system (10 years)",
+			"isSatisfied": false,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Last10_Immune",
+					"path": "Last10_Immune",
+					"alias": "Immune system",
+					"section": "Immune system (10 years)",
+					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"rawSection": "Immune system (10 years)",
+					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"isSatisfied": false,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Immune system"],
+					"triggerQuestions": {},
+					"questions": [
 						{
 							"name": "LAST_10_IMMUNE",
 							"path": "LAST_10_IMMUNE",
@@ -1007,6 +1271,34 @@
 			]
 		}
 	],
-	"allAnswers": {},
-	"debugInfo": {}
+	"allAnswers": {
+		"BASKET_LIFE_COVER": ["10000"],
+		"BIRTHDATE": [],
+		"CITIZENSHIP": [],
+		"GENDER": [],
+		"HEIGHT_FEET": [],
+		"HEIGHT_INCHES": [],
+		"LAST_10_ALCOHOL": [],
+		"LAST_10_CANCER": [],
+		"LAST_10_CNS": [],
+		"LAST_10_DRIVING": [],
+		"LAST_10_DRUG_USE": [],
+		"LAST_10_ENDO": [],
+		"LAST_10_GITRACT": [],
+		"LAST_10_HEART": [],
+		"LAST_10_HIV": [],
+		"LAST_10_IMMUNE": [],
+		"LAST_10_MENTAL_HEALTH": [],
+		"LAST_10_RESPIRATORY": [],
+		"LAST_2_PROCEDURE": [],
+		"LAST_5_DRIVING": [],
+		"LAST_5_TREATMENT": [],
+		"MIB_PRESENT": [],
+		"PRODUCT": ["Life"],
+		"RX_PRESENT": [],
+		"SALES_CHANNEL": ["Direct"],
+		"SOURCE": ["Initial application form"],
+		"TOBACCO": [],
+		"TOTAL_LIFE_COVER": ["10000"]
+	}
 }

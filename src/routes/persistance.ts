@@ -26,7 +26,7 @@ router.get('/fetch/:interviewId', async (req: Request<{ interviewId: string }>, 
 	try {
 		const persistance = await fetchPersistance(req.params.interviewId);
 		if (!persistance) {
-			res.status(500).json({ error: 'invaild interview id' });
+			res.status(500).json({ error: 'invalid interview id' });
 			return;
 		} else {
 			res.status(200).json(persistance);
@@ -41,7 +41,7 @@ router.post('/update/:interviewId/:updateType', async (req: Request<{ interviewI
 		let persistance = await fetchPersistance(req.params.interviewId);
 
 		if (!persistance) {
-			res.status(500).json({ error: 'invaild interview id' });
+			res.status(500).json({ error: 'invalid interview id' });
 			return;
 		}
 
@@ -60,7 +60,7 @@ router.post('/update/:interviewId/:updateType', async (req: Request<{ interviewI
 				break;
 
 			default:
-				res.status(500).json({ error: 'invaild update expected' });
+				res.status(500).json({ error: 'invalid update expected' });
 				return;
 		}
 
@@ -75,7 +75,7 @@ router.post('/update-status/:interviewId', async (req: Request<{ interviewId: st
 		let persistance = await fetchPersistance(req.params.interviewId);
 
 		if (!persistance) {
-			res.status(500).json({ error: 'invaild interview id' });
+			res.status(500).json({ error: 'invalid interview id' });
 			return;
 		}
 
@@ -84,7 +84,7 @@ router.post('/update-status/:interviewId', async (req: Request<{ interviewId: st
 		const processName = req.body.processCompleted.toUpperCase();
 
 		if (!processArray.includes(processName)) {
-			res.status(500).json({ error: 'invaild process name' });
+			res.status(500).json({ error: 'invalid process name' });
 			return;
 		}
 
@@ -102,7 +102,7 @@ router.post('/complete-esign/:interviewId', async (req: Request<{ interviewId: s
 		let persistance = await fetchPersistance(req.params.interviewId);
 
 		if (!persistance) {
-			res.status(500).json({ error: 'invaild interview id' });
+			res.status(500).json({ error: 'invalid interview id' });
 			return;
 		}
 
