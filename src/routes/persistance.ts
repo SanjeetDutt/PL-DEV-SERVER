@@ -11,12 +11,12 @@ export const CONSTANTS = {
 
 checkOrCreateFile(CONSTANTS.PERSISTANCE_FILE);
 
-router.get('/create', async (req: Request, res: Response, next: NextFunction) => {
+router.get('/create/:id?', async (req: Request<{ id: string | null }>, res: Response, next: NextFunction) => {
 	try {
-		const interviewID = createNewInterviewId();
-		await createPersistance(interviewID);
+		const interviewID = req.params.id === null ? createNewInterviewId() : req.params.id;
+		const per = await createPersistance(interviewID);
 		await newEnquiry(interviewID);
-		res.status(200).json(interviewID);
+		res.status(200).json(per);
 	} catch (error) {
 		next(error);
 	}

@@ -35,9 +35,10 @@ export const createNewInterviewId = (): string => {
 };
 
 // function to create the persistance class and add it to persistance store
-export const createPersistance = async (interviewID: string) => {
+export const createPersistance = async (interviewID: string): Promise<Persistance> => {
 	const newPersistance = new Persistance(interviewID);
 	await savePersistance(interviewID, newPersistance);
+	return newPersistance;
 };
 
 export const fetchPersistance = async (interviewID: string) => {
