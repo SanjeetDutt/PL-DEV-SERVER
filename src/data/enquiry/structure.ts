@@ -133,7 +133,12 @@ export class Question {
 					this.isSatisfied = true;
 				} else {
 					this.isSatisfied = false;
-					this.validationErrors = validate as string;
+
+					if (!this.validationErrors) this.validationErrors = {};
+
+					this.answers.forEach((ans) => {
+						if (ans) this.validationErrors[ans] = validate;
+					});
 				}
 			} else {
 				this.isSatisfied = true;
