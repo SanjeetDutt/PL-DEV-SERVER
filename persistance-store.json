@@ -103,31 +103,32 @@
 							"producer": [],
 							"coverage": [
 								{
-									"coverageID": "",
-									"groupPolicyNumber": "",
-									"productTypeCode": "",
-									"benefitPlanIdentifier": "",
-									"benefitClassIdentifier": "",
-									"originalCoverageEffectiveDate": "",
-									"coverageEffectiveDate": "",
-									"coverageTierCode": "",
-									"benefitEarningsEffectiveDate": "",
+									"coverageID": "20200539695145_1",
+									"groupPolicyNumber": "320098",
+									"productTypeCode": "Life",
+									"benefitPlanIdentifier": "Vol",
+									"benefitClassIdentifier": "001",
+									"originalCoverageEffectiveDate": "2021-01-01",
+									"coverageEffectiveDate": "2022-12-31",
+									"coverageTierCode": "Employee",
+									"benefitAmount": 0.0,
+									"benefitEarningsEffectiveDate": "2019-01-01",
 									"electedCoverage": {
-										"electedBenefitAmount": 0,
+										"electedBenefitAmount": 65000.0,
 										"electedCoverageInsured": [
 											{
-												"insuredPartyID": "",
-												"primaryInsuredIndicator": false,
-												"insuredCoverageEffectiveDate": ""
+												"insuredPartyID": "71674:999",
+												"primaryInsuredIndicator": true,
+												"insuredCoverageEffectiveDate": "2022-12-31"
 											}
 										],
 										"electedCoverageRider": []
 									},
 									"coverageInsured": [
 										{
-											"insuredPartyID": "",
-											"primaryInsuredIndicator": false,
-											"insuredCoverageEffectiveDate": ""
+											"insuredPartyID": "71674:999",
+											"primaryInsuredIndicator": true,
+											"insuredCoverageEffectiveDate": "2022-12-31"
 										}
 									],
 									"coverageEventID": []
