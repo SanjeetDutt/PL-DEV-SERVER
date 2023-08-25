@@ -1,19 +1,380 @@
 {
-	"enquiryId": "0a2b82b5-2569-45ad-b39e-288d88fc7fc6",
+	"enquiryId": "b65da418-e75a-458b-bc04-76769e6125a9",
 	"branch": "PLGroupBen",
-	"tag": "EOI_Refinement_v7",
+	"tag": "EOI_Refinement_v11",
 	"locale": "EN_US",
 	"availableLocales": ["EN_US"],
-	"effectiveDate": 1691020800000,
+	"effectiveDate": 1692921600000,
 	"isVoid": false,
-	"isSatisfied": false,
+	"isSatisfied": true,
 	"isCloseable": false,
-	"isOpen": true,
-	"buckets": [],
+	"isOpen": false,
+	"buckets": [
+		{
+			"type": "NUMBER",
+			"name": "BMI",
+			"contributions": [
+				{
+					"value": 33,
+					"sources": ["Build"]
+				}
+			],
+			"min": {
+				"value": 33,
+				"sources": ["Build"]
+			},
+			"max": {
+				"value": 33,
+				"sources": ["Build"]
+			},
+			"sum": {
+				"value": 33,
+				"sources": ["Build"]
+			}
+		},
+		{
+			"type": "NUMBER",
+			"name": "COMBINED_HEIGHT_INCHES",
+			"contributions": [
+				{
+					"value": 65,
+					"sources": ["Build"]
+				}
+			],
+			"min": {
+				"value": 65,
+				"sources": ["Build"]
+			},
+			"max": {
+				"value": 65,
+				"sources": ["Build"]
+			},
+			"sum": {
+				"value": 65,
+				"sources": ["Build"]
+			}
+		},
+		{
+			"type": "OPTION",
+			"name": "CONSOLIDATED_EVIDENCE_CI",
+			"contributions": [
+				{
+					"value": "EO_SCRIPT_CHECK",
+					"sources": ["Evidence_Required", "Last2_Procedure", "Last5_Treatment"]
+				}
+			],
+			"min": {
+				"value": "EO_SCRIPT_CHECK",
+				"sources": ["Evidence_Required", "Last2_Procedure", "Last5_Treatment"]
+			},
+			"max": {
+				"value": "EO_SCRIPT_CHECK",
+				"sources": ["Evidence_Required", "Last2_Procedure", "Last5_Treatment"]
+			}
+		},
+		{
+			"type": "NUMBER",
+			"name": "CV_RISK_SCORE",
+			"contributions": [
+				{
+					"value": 3,
+					"sources": ["Build"]
+				}
+			],
+			"min": {
+				"value": 3,
+				"sources": ["Build"]
+			},
+			"max": {
+				"value": 3,
+				"sources": ["Build"]
+			},
+			"sum": {
+				"value": 3,
+				"sources": ["Build"]
+			}
+		},
+		{
+			"type": "OPTION",
+			"name": "DECISION_CI",
+			"contributions": [
+				{
+					"value": "STANDARD",
+					"sources": ["Non_Medical_Limits"]
+				},
+				{
+					"value": "EVIDENCE_REQUIRED",
+					"sources": ["Last5_Treatment"]
+				},
+				{
+					"value": "EVIDENCE_REQUIRED",
+					"sources": ["Last2_Procedure"]
+				},
+				{
+					"value": "REFER",
+					"sources": ["Amphetamine_Abuse"]
+				},
+				{
+					"value": "REFER",
+					"sources": ["Hypertension"]
+				},
+				{
+					"value": "REFER",
+					"sources": ["Diabetes"]
+				},
+				{
+					"value": "REFER",
+					"sources": ["Impaired_Glucose"]
+				},
+				{
+					"value": "REFER",
+					"sources": ["Refer_All"]
+				},
+				{
+					"value": "REFER",
+					"sources": ["Lupus_Erythematosus"]
+				},
+				{
+					"value": "DECLINE",
+					"sources": ["CV_Risk_Combined_Hypertension_Diabetes"]
+				},
+				{
+					"value": "REFER",
+					"sources": ["CV_Risk_Feeder"]
+				},
+				{
+					"value": "NON_STANDARD",
+					"sources": ["Non_Standard_Decisions"]
+				}
+			],
+			"min": {
+				"value": "STANDARD",
+				"sources": ["Non_Medical_Limits"]
+			},
+			"max": {
+				"value": "DECLINE",
+				"sources": ["CV_Risk_Combined_Hypertension_Diabetes"]
+			}
+		},
+		{
+			"type": "OPTION",
+			"name": "EMPLOYMENT_STATUS",
+			"contributions": [
+				{
+					"value": "EMPLOYED",
+					"sources": ["Set_Employment_Status"]
+				}
+			],
+			"min": {
+				"value": "EMPLOYED",
+				"sources": ["Set_Employment_Status"]
+			},
+			"max": {
+				"value": "EMPLOYED",
+				"sources": ["Set_Employment_Status"]
+			}
+		},
+		{
+			"type": "NUMBER",
+			"name": "EM_CI",
+			"contributions": [
+				{
+					"value": 50,
+					"sources": ["Build"]
+				},
+				{
+					"value": 0,
+					"sources": ["Build", "CV_Risk_Calculator_CI"]
+				},
+				{
+					"value": 0,
+					"sources": ["Build", "CV_Risk_Calculator_CI", "EM_Rounding"]
+				}
+			],
+			"min": {
+				"value": 0,
+				"sources": ["Build", "CV_Risk_Calculator_CI", "EM_Rounding"]
+			},
+			"max": {
+				"value": 50,
+				"sources": ["Build"]
+			},
+			"sum": {
+				"value": 50,
+				"sources": ["Build", "CV_Risk_Calculator_CI", "EM_Rounding"]
+			}
+		},
+		{
+			"type": "OPTION",
+			"name": "EVIDENCE_CI",
+			"contributions": [
+				{
+					"value": "EO_SCRIPT_CHECK",
+					"sources": ["Last5_Treatment"]
+				},
+				{
+					"value": "EO_SCRIPT_CHECK",
+					"sources": ["Last2_Procedure"]
+				}
+			],
+			"min": {
+				"value": "EO_SCRIPT_CHECK",
+				"sources": ["Last2_Procedure", "Last5_Treatment"]
+			},
+			"max": {
+				"value": "EO_SCRIPT_CHECK",
+				"sources": ["Last2_Procedure", "Last5_Treatment"]
+			}
+		},
+		{
+			"type": "OPTION",
+			"name": "NO_IND_CI",
+			"contributions": [
+				{
+					"value": "YES",
+					"sources": ["CV_Risk_Feeder"]
+				}
+			],
+			"min": {
+				"value": "YES",
+				"sources": ["CV_Risk_Feeder"]
+			},
+			"max": {
+				"value": "YES",
+				"sources": ["CV_Risk_Feeder"]
+			}
+		},
+		{
+			"type": "NUMBER",
+			"name": "OCCUPATION_CLASS",
+			"contributions": [
+				{
+					"value": 4,
+					"sources": ["Set_Occupation_Class"]
+				}
+			],
+			"min": {
+				"value": 4,
+				"sources": ["Set_Occupation_Class"]
+			},
+			"max": {
+				"value": 4,
+				"sources": ["Set_Occupation_Class"]
+			},
+			"sum": {
+				"value": 4,
+				"sources": ["Set_Occupation_Class"]
+			}
+		},
+		{
+			"type": "OPTION",
+			"name": "REFER_ALL_DISCLOSURE",
+			"contributions": [
+				{
+					"value": "ALZHEIMERS_DISEASE",
+					"sources": ["Last10_CNS"]
+				}
+			],
+			"min": {
+				"value": "ALZHEIMERS_DISEASE",
+				"sources": ["Last10_CNS"]
+			},
+			"max": {
+				"value": "ALZHEIMERS_DISEASE",
+				"sources": ["Last10_CNS"]
+			}
+		},
+		{
+			"type": "OPTION",
+			"name": "RUN_CV_RISK",
+			"contributions": [
+				{
+					"value": "YES",
+					"sources": ["CV_Risk_Feeder"]
+				}
+			],
+			"min": {
+				"value": "YES",
+				"sources": ["CV_Risk_Feeder"]
+			},
+			"max": {
+				"value": "YES",
+				"sources": ["CV_Risk_Feeder"]
+			}
+		},
+		{
+			"type": "NUMBER",
+			"name": "TOTAL_CV_RISK_CI",
+			"contributions": [
+				{
+					"value": 0,
+					"sources": ["CV_Risk_Calculator_CI"]
+				},
+				{
+					"value": 50,
+					"sources": ["Build", "CV_Risk_Calculator_CI"]
+				},
+				{
+					"value": 0,
+					"sources": ["CV_Risk_Calculator_CI"]
+				},
+				{
+					"value": 0,
+					"sources": ["CV_Risk_Calculator_CI"]
+				},
+				{
+					"value": 0,
+					"sources": ["CV_Risk_Calculator_CI"]
+				},
+				{
+					"value": 0,
+					"sources": ["CV_Risk_Calculator_CI"]
+				},
+				{
+					"value": 10,
+					"sources": ["CV_Risk_Calculator_CI"]
+				}
+			],
+			"min": {
+				"value": 0,
+				"sources": ["CV_Risk_Calculator_CI"]
+			},
+			"max": {
+				"value": 50,
+				"sources": ["Build", "CV_Risk_Calculator_CI"]
+			},
+			"sum": {
+				"value": 60,
+				"sources": ["Build", "CV_Risk_Calculator_CI"]
+			}
+		},
+		{
+			"type": "NUMBER",
+			"name": "TOTAL_CV_RISK_MODIFIED_CI",
+			"contributions": [
+				{
+					"value": 50,
+					"sources": ["Build", "CV_Risk_Calculator_CI"]
+				}
+			],
+			"min": {
+				"value": 50,
+				"sources": ["Build", "CV_Risk_Calculator_CI"]
+			},
+			"max": {
+				"value": 50,
+				"sources": ["Build", "CV_Risk_Calculator_CI"]
+			},
+			"sum": {
+				"value": 50,
+				"sources": ["Build", "CV_Risk_Calculator_CI"]
+			}
+		}
+	],
 	"sections": [
 		{
 			"name": "Your Basic Details",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -24,7 +385,7 @@
 					"preamble": "Please tell us your basic quote information",
 					"rawSection": "Your Basic Details",
 					"rawPreamble": "Please tell us your basic quote information",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -67,7 +428,7 @@
 							"hasAnswer": true,
 							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": ["Life"],
+							"answers": ["Critical Illness"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
@@ -89,74 +450,13 @@
 							}
 						},
 						{
-							"name": "SALES_CHANNEL",
-							"path": "SALES_CHANNEL",
-							"locale": "EN_US",
-							"hasAnswer": true,
-							"isSatisfied": true,
-							"triggeredLines": [],
-							"answers": ["Direct"],
-							"validationErrors": {},
-							"definition": {
-								"type": "OPTION_GROUP",
-								"name": "SALES_CHANNEL",
-								"text": "What is the sales channel?",
-								"isMultiValued": false,
-								"tags": [],
-								"optionListName": "SalesChannelOptions",
-								"includedCategories": [],
-								"excludedCategories": [],
-								"options": ["Telephone", "Direct"],
-								"optionTags": {
-									"Telephone": [],
-									"Direct": []
-								}
-							}
-						},
-						{
-							"name": "BASKET_LIFE_COVER",
-							"path": "BASKET_LIFE_COVER",
-							"locale": "EN_US",
-							"hasAnswer": true,
-							"isSatisfied": true,
-							"triggeredLines": [],
-							"answers": ["10000"],
-							"validationErrors": {},
-							"definition": {
-								"type": "INTEGER",
-								"name": "BASKET_LIFE_COVER",
-								"text": "Basket total life cover",
-								"isMultiValued": false,
-								"tags": ["DO_NOT_DISPLAY"],
-								"lowerBound": 0
-							}
-						},
-						{
-							"name": "TOTAL_LIFE_COVER",
-							"path": "TOTAL_LIFE_COVER",
-							"locale": "EN_US",
-							"hasAnswer": true,
-							"isSatisfied": true,
-							"triggeredLines": [],
-							"answers": ["10000"],
-							"validationErrors": {},
-							"definition": {
-								"type": "INTEGER",
-								"name": "TOTAL_LIFE_COVER",
-								"text": "Total amount of life cover",
-								"isMultiValued": false,
-								"tags": ["DO_NOT_DISPLAY"],
-								"lowerBound": 0
-							}
-						},
-						{
 							"name": "GENDER",
 							"path": "GENDER",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["Male"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
@@ -178,10 +478,10 @@
 							"name": "BIRTHDATE",
 							"path": "BIRTHDATE",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["12/12/2001"],
 							"validationErrors": {},
 							"definition": {
 								"type": "PAST_DATE",
@@ -190,56 +490,6 @@
 								"isMultiValued": false,
 								"tags": [],
 								"isExact": false
-							}
-						},
-						{
-							"name": "MIB_PRESENT",
-							"path": "MIB_PRESENT",
-							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
-							"triggeredLines": [],
-							"answers": [],
-							"validationErrors": {},
-							"definition": {
-								"type": "OPTION_GROUP",
-								"name": "MIB_PRESENT",
-								"text": "Have MIB codes been passed to rules session?",
-								"isMultiValued": false,
-								"tags": ["DO_NOT_DISPLAY"],
-								"optionListName": "YesNo",
-								"includedCategories": [],
-								"excludedCategories": [],
-								"options": ["Yes", "No"],
-								"optionTags": {
-									"No": [],
-									"Yes": []
-								}
-							}
-						},
-						{
-							"name": "RX_PRESENT",
-							"path": "RX_PRESENT",
-							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
-							"triggeredLines": [],
-							"answers": [],
-							"validationErrors": {},
-							"definition": {
-								"type": "OPTION_GROUP",
-								"name": "RX_PRESENT",
-								"text": "Have RX codes been passed to rules session?",
-								"isMultiValued": false,
-								"tags": ["DO_NOT_DISPLAY"],
-								"optionListName": "YesNo",
-								"includedCategories": [],
-								"excludedCategories": [],
-								"options": ["Yes", "No"],
-								"optionTags": {
-									"No": [],
-									"Yes": []
-								}
 							}
 						}
 					],
@@ -250,7 +500,7 @@
 		},
 		{
 			"name": "Citizenship",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -259,7 +509,7 @@
 					"alias": "Citizenship",
 					"section": "Citizenship",
 					"rawSection": "Citizenship",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -273,10 +523,10 @@
 							"name": "CITIZENSHIP",
 							"path": "CITIZENSHIP",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["Yes"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
@@ -302,7 +552,7 @@
 		},
 		{
 			"name": "Height",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -311,7 +561,7 @@
 					"alias": "Your height",
 					"section": "Height",
 					"rawSection": "Height",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -325,17 +575,17 @@
 							"name": "HEIGHT_FEET",
 							"path": "HEIGHT_FEET",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["5"],
 							"validationErrors": {},
 							"definition": {
 								"type": "INTEGER",
 								"name": "HEIGHT_FEET",
 								"text": "Please provide your current height:",
 								"isMultiValued": false,
-								"tags": ["GROUP/HEIGHT"],
+								"tags": ["GROUP/HEIGHT/feet"],
 								"lowerBound": 2,
 								"upperBound": 10
 							}
@@ -344,17 +594,17 @@
 							"name": "HEIGHT_INCHES",
 							"path": "HEIGHT_INCHES",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["5"],
 							"validationErrors": {},
 							"definition": {
 								"type": "INTEGER",
 								"name": "HEIGHT_INCHES",
 								"text": "Please provide your current height:",
 								"isMultiValued": false,
-								"tags": ["GROUP/HEIGHT"],
+								"tags": ["GROUP/HEIGHT/inches"],
 								"lowerBound": 0,
 								"upperBound": 12
 							}
@@ -366,8 +616,54 @@
 			]
 		},
 		{
+			"name": "Weight",
+			"isSatisfied": true,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Build_Weight",
+					"path": "Build_Weight",
+					"alias": "Your weight",
+					"section": "Weight",
+					"rawSection": "Weight",
+					"isSatisfied": true,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Your weight"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "WEIGHT_MALE",
+							"path": "WEIGHT_MALE",
+							"locale": "EN_US",
+							"hasAnswer": true,
+							"isSatisfied": true,
+							"triggeredLines": [],
+							"answers": ["200"],
+							"validationErrors": {},
+							"definition": {
+								"type": "NUMBER",
+								"name": "WEIGHT_MALE",
+								"text": "Please provide your current weight:",
+								"isMultiValued": false,
+								"tags": ["Ibs"],
+								"lowerBound": 38.0,
+								"upperBound": 420.0
+							}
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
 			"name": "Tobacco and nicotine",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -376,7 +672,7 @@
 					"alias": "Your tobacco and nicotine use",
 					"section": "Tobacco and nicotine",
 					"rawSection": "Tobacco and nicotine",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -390,10 +686,10 @@
 							"name": "TOBACCO",
 							"path": "TOBACCO",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["Yes"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
@@ -419,7 +715,7 @@
 		},
 		{
 			"name": "Violations (5 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -428,7 +724,7 @@
 					"alias": "Violations",
 					"section": "Violations (5 years)",
 					"rawSection": "Violations (5 years)",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -442,10 +738,10 @@
 							"name": "LAST_5_DRIVING",
 							"path": "LAST_5_DRIVING",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["No"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
@@ -471,7 +767,7 @@
 		},
 		{
 			"name": "Violations (10 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -480,7 +776,7 @@
 					"alias": "Violations",
 					"section": "Violations (10 years)",
 					"rawSection": "Violations (10 years)",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -494,10 +790,10 @@
 							"name": "LAST_10_DRIVING",
 							"path": "LAST_10_DRIVING",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["No"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
@@ -523,7 +819,7 @@
 		},
 		{
 			"name": "Treatment (5 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -532,7 +828,7 @@
 					"alias": "Treatment",
 					"section": "Treatment (5 years)",
 					"rawSection": "Treatment (5 years)",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -546,10 +842,10 @@
 							"name": "LAST_5_TREATMENT",
 							"path": "LAST_5_TREATMENT",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["Yes"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
@@ -568,14 +864,51 @@
 							}
 						}
 					],
-					"buckets": [],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "DECISION_CI",
+							"contributions": [
+								{
+									"value": "EVIDENCE_REQUIRED",
+									"sources": ["Last5_Treatment"]
+								}
+							],
+							"min": {
+								"value": "EVIDENCE_REQUIRED",
+								"sources": ["Last5_Treatment"]
+							},
+							"max": {
+								"value": "EVIDENCE_REQUIRED",
+								"sources": ["Last5_Treatment"]
+							}
+						},
+						{
+							"type": "OPTION",
+							"name": "EVIDENCE_CI",
+							"contributions": [
+								{
+									"value": "EO_SCRIPT_CHECK",
+									"sources": ["Last5_Treatment"]
+								}
+							],
+							"min": {
+								"value": "EO_SCRIPT_CHECK",
+								"sources": ["Last5_Treatment"]
+							},
+							"max": {
+								"value": "EO_SCRIPT_CHECK",
+								"sources": ["Last5_Treatment"]
+							}
+						}
+					],
 					"staticallyTriggeredLines": []
 				}
 			]
 		},
 		{
 			"name": "Procedures (2 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -583,10 +916,8 @@
 					"path": "Last2_Procedure",
 					"alias": "Procedures",
 					"section": "Procedures (2 years)",
-					"preamble": "",
 					"rawSection": "Procedures (2 years)",
-					"rawPreamble": "",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -600,15 +931,15 @@
 							"name": "LAST_2_PROCEDURE",
 							"path": "LAST_2_PROCEDURE",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["Inpatient or outpatient diagnostic procedure"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_2_PROCEDURE",
-								"text": "Within the past 24 months have you had a medical professional's recommendation, or are you being considered for or scheduled for any of the following? (Select all that apply)",
+								"text": "Within the past 24 months have you had a medical professional's recommendation, or are you being considered for or scheduled for any of the following?",
 								"helpText": "You do not need to include tests related to the Human Immunodeficiency Virus (HIV), Acquired Immune Deficiency Syndrome (AIDS),  AIDS Related Complex (ARC)",
 								"isMultiValued": true,
 								"tags": [],
@@ -625,14 +956,51 @@
 							}
 						}
 					],
-					"buckets": [],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "DECISION_CI",
+							"contributions": [
+								{
+									"value": "EVIDENCE_REQUIRED",
+									"sources": ["Last2_Procedure"]
+								}
+							],
+							"min": {
+								"value": "EVIDENCE_REQUIRED",
+								"sources": ["Last2_Procedure"]
+							},
+							"max": {
+								"value": "EVIDENCE_REQUIRED",
+								"sources": ["Last2_Procedure"]
+							}
+						},
+						{
+							"type": "OPTION",
+							"name": "EVIDENCE_CI",
+							"contributions": [
+								{
+									"value": "EO_SCRIPT_CHECK",
+									"sources": ["Last2_Procedure"]
+								}
+							],
+							"min": {
+								"value": "EO_SCRIPT_CHECK",
+								"sources": ["Last2_Procedure"]
+							},
+							"max": {
+								"value": "EO_SCRIPT_CHECK",
+								"sources": ["Last2_Procedure"]
+							}
+						}
+					],
 					"staticallyTriggeredLines": []
 				}
 			]
 		},
 		{
 			"name": "Drug use (10 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -641,7 +1009,7 @@
 					"alias": "Drug Use",
 					"section": "Drug use (10 years)",
 					"rawSection": "Drug use (10 years)",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -655,15 +1023,15 @@
 							"name": "LAST_10_DRUG_USE",
 							"path": "LAST_10_DRUG_USE",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["Amphetamines"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_DRUG_USE",
-								"text": "In the past 10 years, have you used any of the following, except as prescribed by a physician? (Select all that apply)",
+								"text": "In the past 10 years, have you used any of the following, except as prescribed by a physician?",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_DrugOptions",
@@ -694,7 +1062,7 @@
 		},
 		{
 			"name": "Alcohol (10 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -703,7 +1071,7 @@
 					"alias": "Alcohol",
 					"section": "Alcohol (10 years)",
 					"rawSection": "Alcohol (10 years)",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -717,15 +1085,15 @@
 							"name": "LAST_10_ALCOHOL",
 							"path": "LAST_10_ALCOHOL",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["None of these"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_ALCOHOL",
-								"text": "In the past 10 years, have you received medical treatment or counseling for, or been advised by a healthcare professional about any of the following: (Select all that apply)",
+								"text": "In the past 10 years, have you received medical treatment or counseling for, or been advised by a healthcare professional about any of the following?",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_AlcoholOptions",
@@ -747,7 +1115,7 @@
 		},
 		{
 			"name": "HIV & AIDS (10 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -756,7 +1124,7 @@
 					"alias": "HIV and AIDS",
 					"section": "HIV & AIDS (10 years)",
 					"rawSection": "HIV & AIDS (10 years)",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -770,15 +1138,15 @@
 							"name": "LAST_10_HIV",
 							"path": "LAST_10_HIV",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["None of these"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_HIV",
-								"text": "In the past 10 years, have you been diagnosed or tested positive for any of the following? (Select all that apply)",
+								"text": "In the past 10 years, have you been diagnosed or tested positive for any of the following?",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_HIVOptions",
@@ -800,7 +1168,7 @@
 		},
 		{
 			"name": "Heart and circulatory (10 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -811,7 +1179,7 @@
 					"preamble": "In the past 10 years, have you been diagnosed, treated, hospitalized, prescribed medication for, or given medical advice by a physician or healthcare provider to seek treatment for:",
 					"rawSection": "Heart and circulatory (10 years)",
 					"rawPreamble": "In the past 10 years, have you been diagnosed, treated, hospitalized, prescribed medication for, or given medical advice by a physician or healthcare provider to seek treatment for:",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -825,15 +1193,15 @@
 							"name": "LAST_10_HEART",
 							"path": "LAST_10_HEART",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["Uncontrolled hypertension"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_HEART",
-								"text": "Any disease or disorder of the heart or circulatory system? (Select all that apply)",
+								"text": "Any disease or disorder of the heart or circulatory system?",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_HeartOptions",
@@ -863,7 +1231,7 @@
 		},
 		{
 			"name": "Cancers and tumors (10 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -874,7 +1242,7 @@
 					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
 					"rawSection": "Cancers and tumors (10 years)",
 					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -888,15 +1256,15 @@
 							"name": "LAST_10_CANCER",
 							"path": "LAST_10_CANCER",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["None of these"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_CANCER",
-								"text": "Any of the following? (Select all that apply)",
+								"text": "Any of the following?",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_CancerOptions",
@@ -923,7 +1291,7 @@
 		},
 		{
 			"name": "Endocrine system (10 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -934,7 +1302,7 @@
 					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
 					"rawSection": "Endocrine system (10 years)",
 					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -948,15 +1316,15 @@
 							"name": "LAST_10_ENDO",
 							"path": "LAST_10_ENDO",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["Diabetes or pre-diabetes"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_ENDO",
-								"text": "Any of the following? (Select all that apply)",
+								"text": "Any of the following?",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_EndoOptions",
@@ -980,7 +1348,7 @@
 		},
 		{
 			"name": "Gastrointestinal tract (10 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -991,7 +1359,7 @@
 					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
 					"rawSection": "Gastrointestinal tract (10 years)",
 					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -1005,15 +1373,15 @@
 							"name": "LAST_10_GITRACT",
 							"path": "LAST_10_GITRACT",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["None of these"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_GITRACT",
-								"text": "Any disorder or disease of the gastrointestinal system, liver, intestine, stomach, pancreas or rectum? (Select all that apply)",
+								"text": "Any disorder or disease of the gastrointestinal system, liver, intestine, stomach, pancreas or rectum?",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_GITractOptions",
@@ -1038,8 +1406,65 @@
 			]
 		},
 		{
+			"name": "Genitourinary system (10 years)",
+			"isSatisfied": true,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Last10_Genito",
+					"path": "Last10_Genito",
+					"alias": "Genitourinary system",
+					"section": "Genitourinary system (10 years)",
+					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"rawSection": "Genitourinary system (10 years)",
+					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
+					"isSatisfied": true,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Genitourinary system"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "LAST_10_GENITO_MALE",
+							"path": "LAST_10_GENITO_MALE",
+							"locale": "EN_US",
+							"hasAnswer": true,
+							"isSatisfied": true,
+							"triggeredLines": [],
+							"answers": ["None of these"],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_GROUP",
+								"name": "LAST_10_GENITO_MALE",
+								"text": "Any of the following disorders or diseases?",
+								"isMultiValued": true,
+								"tags": [],
+								"optionListName": "Last10_GenitoMaleOptions",
+								"includedCategories": [],
+								"excludedCategories": [],
+								"options": ["Bladder", "Genito-urinary system", "Kidneys", "Prostate", "None of these"],
+								"optionTags": {
+									"Genito-urinary system": [],
+									"Kidneys": [],
+									"Bladder": [],
+									"None of these": ["EXCLUSIVE"],
+									"Prostate": []
+								}
+							}
+						}
+					],
+					"buckets": [],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
 			"name": "Respiratory system (10 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -1050,7 +1475,7 @@
 					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
 					"rawSection": "Respiratory system (10 years)",
 					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -1064,15 +1489,15 @@
 							"name": "LAST_10_RESPIRATORY",
 							"path": "LAST_10_RESPIRATORY",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["None of these"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_RESPIRATORY",
-								"text": "Any disorder or disease of the respiratory system? (Select all that apply)",
+								"text": "Any disorder or disease of the respiratory system?",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_RespOptions",
@@ -1096,7 +1521,7 @@
 		},
 		{
 			"name": "Brain and nervous system (10 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -1107,7 +1532,7 @@
 					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
 					"rawSection": "Brain and nervous system (10 years)",
 					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -1121,15 +1546,15 @@
 							"name": "LAST_10_CNS",
 							"path": "LAST_10_CNS",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["Alzheimer's disease"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_CNS",
-								"text": "Any disorder or disease of the brain or nervous system including: (select all that apply)",
+								"text": "Any disorder or disease of the brain or nervous system including:",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_CNSOptions",
@@ -1151,14 +1576,33 @@
 							}
 						}
 					],
-					"buckets": [],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "REFER_ALL_DISCLOSURE",
+							"contributions": [
+								{
+									"value": "ALZHEIMERS_DISEASE",
+									"sources": ["Last10_CNS"]
+								}
+							],
+							"min": {
+								"value": "ALZHEIMERS_DISEASE",
+								"sources": ["Last10_CNS"]
+							},
+							"max": {
+								"value": "ALZHEIMERS_DISEASE",
+								"sources": ["Last10_CNS"]
+							}
+						}
+					],
 					"staticallyTriggeredLines": []
 				}
 			]
 		},
 		{
 			"name": "Mental health (10 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -1169,7 +1613,7 @@
 					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
 					"rawSection": "Mental health (10 years)",
 					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -1183,15 +1627,15 @@
 							"name": "LAST_10_MENTAL_HEALTH",
 							"path": "LAST_10_MENTAL_HEALTH",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["None of these"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_MENTAL_HEALTH",
-								"text": "Any psychiatric or mental health disorder or disease? (Select all that apply)",
+								"text": "Any psychiatric or mental health disorder or disease?",
 								"isMultiValued": true,
 								"tags": [],
 								"optionListName": "Last10_MentalOptions",
@@ -1217,7 +1661,7 @@
 		},
 		{
 			"name": "Immune system (10 years)",
-			"isSatisfied": false,
+			"isSatisfied": true,
 			"hasQuestions": true,
 			"enquiryLines": [
 				{
@@ -1228,7 +1672,7 @@
 					"preamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
 					"rawSection": "Immune system (10 years)",
 					"rawPreamble": "In the past 10 years have you been diagnosed, treated, hospitalized, prescribed medication for or been given medical advice by a physician or healthcare provider to seek treatment for:",
-					"isSatisfied": false,
+					"isSatisfied": true,
 					"hasQuestions": true,
 					"isWrapUpLine": false,
 					"isGlobal": true,
@@ -1242,25 +1686,26 @@
 							"name": "LAST_10_IMMUNE",
 							"path": "LAST_10_IMMUNE",
 							"locale": "EN_US",
-							"hasAnswer": false,
-							"isSatisfied": false,
+							"hasAnswer": true,
+							"isSatisfied": true,
 							"triggeredLines": [],
-							"answers": [],
+							"answers": ["Systemic lupus"],
 							"validationErrors": {},
 							"definition": {
 								"type": "OPTION_GROUP",
 								"name": "LAST_10_IMMUNE",
-								"text": "Any disorder or disease of the immune system, systemic lupus, or other auto-immune disorders?",
+								"text": "Any disorder or disease of the immune system?",
 								"helpText": "You do not need to include those related to the Human Immunodeficiency Virus (HIV), Acquired Immune Deficiency Syndrome (AIDS),  AIDS Related Complex (ARC)",
-								"isMultiValued": false,
+								"isMultiValued": true,
 								"tags": [],
-								"optionListName": "YesNo",
+								"optionListName": "Last10_ImmuneOptions",
 								"includedCategories": [],
 								"excludedCategories": [],
-								"options": ["Yes", "No"],
+								"options": ["Systemic lupus", "Other auto-immune disease or disorder", "None of these"],
 								"optionTags": {
-									"No": [],
-									"Yes": []
+									"Other auto-immune disease or disorder": [],
+									"Systemic lupus": [],
+									"None of these": ["EXCLUSIVE"]
 								}
 							}
 						}
@@ -1269,36 +1714,936 @@
 					"staticallyTriggeredLines": []
 				}
 			]
+		},
+		{
+			"name": "Your Build",
+			"isSatisfied": true,
+			"hasQuestions": false,
+			"enquiryLines": [
+				{
+					"name": "Build",
+					"path": "Build",
+					"alias": "Build",
+					"section": "Your Build",
+					"preamble": "Please tell us more about your Build",
+					"rawSection": "Your Build",
+					"rawPreamble": "Please tell us more about your $triggerTag",
+					"isSatisfied": true,
+					"hasQuestions": false,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Build"],
+					"triggerQuestions": {},
+					"questions": [],
+					"buckets": [
+						{
+							"type": "NUMBER",
+							"name": "BMI",
+							"contributions": [
+								{
+									"value": 33,
+									"sources": ["Build"]
+								}
+							],
+							"min": {
+								"value": 33,
+								"sources": ["Build"]
+							},
+							"max": {
+								"value": 33,
+								"sources": ["Build"]
+							},
+							"sum": {
+								"value": 33,
+								"sources": ["Build"]
+							}
+						},
+						{
+							"type": "NUMBER",
+							"name": "COMBINED_HEIGHT_INCHES",
+							"contributions": [
+								{
+									"value": 65,
+									"sources": ["Build"]
+								}
+							],
+							"min": {
+								"value": 65,
+								"sources": ["Build"]
+							},
+							"max": {
+								"value": 65,
+								"sources": ["Build"]
+							},
+							"sum": {
+								"value": 65,
+								"sources": ["Build"]
+							}
+						},
+						{
+							"type": "NUMBER",
+							"name": "CV_RISK_SCORE",
+							"contributions": [
+								{
+									"value": 3,
+									"sources": ["Build"]
+								}
+							],
+							"min": {
+								"value": 3,
+								"sources": ["Build"]
+							},
+							"max": {
+								"value": 3,
+								"sources": ["Build"]
+							},
+							"sum": {
+								"value": 3,
+								"sources": ["Build"]
+							}
+						},
+						{
+							"type": "NUMBER",
+							"name": "EM_CI",
+							"contributions": [
+								{
+									"value": 50,
+									"sources": ["Build"]
+								}
+							],
+							"min": {
+								"value": 50,
+								"sources": ["Build"]
+							},
+							"max": {
+								"value": 50,
+								"sources": ["Build"]
+							},
+							"sum": {
+								"value": 50,
+								"sources": ["Build"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Your Amphetamine Abuse",
+			"isSatisfied": true,
+			"hasQuestions": false,
+			"enquiryLines": [
+				{
+					"name": "Amphetamine_Abuse",
+					"path": "Amphetamine_Abuse",
+					"alias": "Amphetamine Abuse",
+					"section": "Your Amphetamine Abuse",
+					"preamble": "Please tell us more about your Amphetamine Abuse",
+					"rawSection": "Your $triggerTag",
+					"rawPreamble": "Please tell us more about your $triggerTag",
+					"isSatisfied": true,
+					"hasQuestions": false,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Amphetamine Abuse"],
+					"triggerQuestions": {},
+					"questions": [],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "DECISION_CI",
+							"contributions": [
+								{
+									"value": "REFER",
+									"sources": ["Amphetamine_Abuse"]
+								}
+							],
+							"min": {
+								"value": "REFER",
+								"sources": ["Amphetamine_Abuse"]
+							},
+							"max": {
+								"value": "REFER",
+								"sources": ["Amphetamine_Abuse"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Your Hypertension",
+			"isSatisfied": true,
+			"hasQuestions": false,
+			"enquiryLines": [
+				{
+					"name": "Hypertension",
+					"path": "Hypertension",
+					"alias": "Hypertension",
+					"section": "Your Hypertension",
+					"preamble": "Please tell us more about your Hypertension",
+					"rawSection": "Your $triggerTag",
+					"rawPreamble": "Please tell us more about your $triggerTag",
+					"isSatisfied": true,
+					"hasQuestions": false,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Hypertension"],
+					"triggerQuestions": {},
+					"questions": [],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "DECISION_CI",
+							"contributions": [
+								{
+									"value": "REFER",
+									"sources": ["Hypertension"]
+								}
+							],
+							"min": {
+								"value": "REFER",
+								"sources": ["Hypertension"]
+							},
+							"max": {
+								"value": "REFER",
+								"sources": ["Hypertension"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Your Diabetes",
+			"isSatisfied": true,
+			"hasQuestions": false,
+			"enquiryLines": [
+				{
+					"name": "Diabetes",
+					"path": "Diabetes",
+					"alias": "Diabetes",
+					"section": "Your Diabetes",
+					"preamble": "Please tell us more about your Diabetes",
+					"rawSection": "Your $triggerTag",
+					"rawPreamble": "Please tell us more about your $triggerTag",
+					"isSatisfied": true,
+					"hasQuestions": false,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Diabetes"],
+					"triggerQuestions": {},
+					"questions": [],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "DECISION_CI",
+							"contributions": [
+								{
+									"value": "REFER",
+									"sources": ["Diabetes"]
+								}
+							],
+							"min": {
+								"value": "REFER",
+								"sources": ["Diabetes"]
+							},
+							"max": {
+								"value": "REFER",
+								"sources": ["Diabetes"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Your Impaired Glucose",
+			"isSatisfied": true,
+			"hasQuestions": false,
+			"enquiryLines": [
+				{
+					"name": "Impaired_Glucose",
+					"path": "Impaired_Glucose",
+					"alias": "Impaired Glucose",
+					"section": "Your Impaired Glucose",
+					"preamble": "Please tell us more about your Impaired Glucose",
+					"rawSection": "Your $triggerTag",
+					"rawPreamble": "Please tell us more about your $triggerTag",
+					"isSatisfied": true,
+					"hasQuestions": false,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Impaired Glucose"],
+					"triggerQuestions": {},
+					"questions": [],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "DECISION_CI",
+							"contributions": [
+								{
+									"value": "REFER",
+									"sources": ["Impaired_Glucose"]
+								}
+							],
+							"min": {
+								"value": "REFER",
+								"sources": ["Impaired_Glucose"]
+							},
+							"max": {
+								"value": "REFER",
+								"sources": ["Impaired_Glucose"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Your Refer All",
+			"isSatisfied": true,
+			"hasQuestions": false,
+			"enquiryLines": [
+				{
+					"name": "Refer_All",
+					"path": "Last10_CNS/Refer_All",
+					"alias": "Refer All",
+					"section": "Your Refer All",
+					"preamble": "Please tell us more about your Refer All",
+					"rawSection": "Your $triggerTag",
+					"rawPreamble": "Please tell us more about your $triggerTag",
+					"isSatisfied": true,
+					"hasQuestions": false,
+					"isWrapUpLine": false,
+					"isGlobal": false,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Refer All"],
+					"triggerQuestions": {},
+					"questions": [],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "DECISION_CI",
+							"contributions": [
+								{
+									"value": "REFER",
+									"sources": ["Refer_All"]
+								}
+							],
+							"min": {
+								"value": "REFER",
+								"sources": ["Refer_All"]
+							},
+							"max": {
+								"value": "REFER",
+								"sources": ["Refer_All"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Your Lupus Erythematosus",
+			"isSatisfied": true,
+			"hasQuestions": false,
+			"enquiryLines": [
+				{
+					"name": "Lupus_Erythematosus",
+					"path": "Lupus_Erythematosus",
+					"alias": "Lupus Erythematosus",
+					"section": "Your Lupus Erythematosus",
+					"preamble": "Please tell us more about your Lupus Erythematosus",
+					"rawSection": "Your $triggerTag",
+					"rawPreamble": "Please tell us more about your $triggerTag",
+					"isSatisfied": true,
+					"hasQuestions": false,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Lupus Erythematosus"],
+					"triggerQuestions": {},
+					"questions": [],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "DECISION_CI",
+							"contributions": [
+								{
+									"value": "REFER",
+									"sources": ["Lupus_Erythematosus"]
+								}
+							],
+							"min": {
+								"value": "REFER",
+								"sources": ["Lupus_Erythematosus"]
+							},
+							"max": {
+								"value": "REFER",
+								"sources": ["Lupus_Erythematosus"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"name": "Combined Cardiovascular Conditions",
+			"isSatisfied": true,
+			"hasQuestions": false,
+			"enquiryLines": [
+				{
+					"name": "CV_Risk_Combined_Hypertension_Diabetes",
+					"path": "CV_Risk_Combined_Hypertension_Diabetes",
+					"alias": "CV Risk Combined Hypertension Diabetes",
+					"section": "Combined Cardiovascular Conditions",
+					"rawSection": "Combined Cardiovascular Conditions",
+					"isSatisfied": true,
+					"hasQuestions": false,
+					"isWrapUpLine": true,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["CV Risk Combined Hypertension Diabetes"],
+					"triggerQuestions": {},
+					"questions": [],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "DECISION_CI",
+							"contributions": [
+								{
+									"value": "DECLINE",
+									"sources": ["CV_Risk_Combined_Hypertension_Diabetes"]
+								}
+							],
+							"min": {
+								"value": "DECLINE",
+								"sources": ["CV_Risk_Combined_Hypertension_Diabetes"]
+							},
+							"max": {
+								"value": "DECLINE",
+								"sources": ["CV_Risk_Combined_Hypertension_Diabetes"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				},
+				{
+					"name": "CV_Risk_Feeder",
+					"path": "CV_Risk_Feeder",
+					"alias": "CV Risk Feeder",
+					"section": "Combined Cardiovascular Conditions",
+					"rawSection": "Combined Cardiovascular Conditions",
+					"isSatisfied": true,
+					"hasQuestions": false,
+					"isWrapUpLine": true,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["CV Risk Feeder"],
+					"triggerQuestions": {},
+					"questions": [],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "DECISION_CI",
+							"contributions": [
+								{
+									"value": "REFER",
+									"sources": ["CV_Risk_Feeder"]
+								}
+							],
+							"min": {
+								"value": "REFER",
+								"sources": ["CV_Risk_Feeder"]
+							},
+							"max": {
+								"value": "REFER",
+								"sources": ["CV_Risk_Feeder"]
+							}
+						},
+						{
+							"type": "OPTION",
+							"name": "NO_IND_CI",
+							"contributions": [
+								{
+									"value": "YES",
+									"sources": ["CV_Risk_Feeder"]
+								}
+							],
+							"min": {
+								"value": "YES",
+								"sources": ["CV_Risk_Feeder"]
+							},
+							"max": {
+								"value": "YES",
+								"sources": ["CV_Risk_Feeder"]
+							}
+						},
+						{
+							"type": "OPTION",
+							"name": "RUN_CV_RISK",
+							"contributions": [
+								{
+									"value": "YES",
+									"sources": ["CV_Risk_Feeder"]
+								}
+							],
+							"min": {
+								"value": "YES",
+								"sources": ["CV_Risk_Feeder"]
+							},
+							"max": {
+								"value": "YES",
+								"sources": ["CV_Risk_Feeder"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				},
+				{
+					"name": "CV_Risk_Calculator_CI",
+					"path": "CV_Risk_Calculator_CI",
+					"alias": "CV Risk Calculator CI",
+					"section": "Combined Cardiovascular Conditions",
+					"rawSection": "Combined Cardiovascular Conditions",
+					"isSatisfied": true,
+					"hasQuestions": false,
+					"isWrapUpLine": true,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["CV Risk Calculator CI"],
+					"triggerQuestions": {},
+					"questions": [],
+					"buckets": [
+						{
+							"type": "NUMBER",
+							"name": "EM_CI",
+							"contributions": [
+								{
+									"value": 0,
+									"sources": ["Build", "CV_Risk_Calculator_CI"]
+								}
+							],
+							"min": {
+								"value": 0,
+								"sources": ["Build", "CV_Risk_Calculator_CI"]
+							},
+							"max": {
+								"value": 0,
+								"sources": ["Build", "CV_Risk_Calculator_CI"]
+							},
+							"sum": {
+								"value": 0,
+								"sources": ["Build", "CV_Risk_Calculator_CI"]
+							}
+						},
+						{
+							"type": "NUMBER",
+							"name": "TOTAL_CV_RISK_CI",
+							"contributions": [
+								{
+									"value": 0,
+									"sources": ["CV_Risk_Calculator_CI"]
+								},
+								{
+									"value": 50,
+									"sources": ["Build", "CV_Risk_Calculator_CI"]
+								},
+								{
+									"value": 0,
+									"sources": ["CV_Risk_Calculator_CI"]
+								},
+								{
+									"value": 0,
+									"sources": ["CV_Risk_Calculator_CI"]
+								},
+								{
+									"value": 0,
+									"sources": ["CV_Risk_Calculator_CI"]
+								},
+								{
+									"value": 0,
+									"sources": ["CV_Risk_Calculator_CI"]
+								},
+								{
+									"value": 10,
+									"sources": ["CV_Risk_Calculator_CI"]
+								}
+							],
+							"min": {
+								"value": 0,
+								"sources": ["CV_Risk_Calculator_CI"]
+							},
+							"max": {
+								"value": 50,
+								"sources": ["Build", "CV_Risk_Calculator_CI"]
+							},
+							"sum": {
+								"value": 60,
+								"sources": ["Build", "CV_Risk_Calculator_CI"]
+							}
+						},
+						{
+							"type": "NUMBER",
+							"name": "TOTAL_CV_RISK_MODIFIED_CI",
+							"contributions": [
+								{
+									"value": 50,
+									"sources": ["Build", "CV_Risk_Calculator_CI"]
+								}
+							],
+							"min": {
+								"value": 50,
+								"sources": ["Build", "CV_Risk_Calculator_CI"]
+							},
+							"max": {
+								"value": 50,
+								"sources": ["Build", "CV_Risk_Calculator_CI"]
+							},
+							"sum": {
+								"value": 50,
+								"sources": ["Build", "CV_Risk_Calculator_CI"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				}
+			]
+		},
+		{
+			"isSatisfied": true,
+			"hasQuestions": true,
+			"enquiryLines": [
+				{
+					"name": "Non_Medical_Limits",
+					"path": "Non_Medical_Limits",
+					"alias": "Non Medical Limits",
+					"isSatisfied": true,
+					"hasQuestions": true,
+					"isWrapUpLine": false,
+					"isGlobal": true,
+					"isRoot": true,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Non Medical Limits"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "BASKET_CI_COVER",
+							"path": "BASKET_CI_COVER",
+							"locale": "EN_US",
+							"hasAnswer": true,
+							"isSatisfied": true,
+							"triggeredLines": [],
+							"answers": ["23"],
+							"validationErrors": {},
+							"definition": {
+								"type": "INTEGER",
+								"name": "BASKET_CI_COVER",
+								"text": "Basket total CI cover",
+								"isMultiValued": false,
+								"tags": ["DO_NOT_DISPLAY"],
+								"lowerBound": 0
+							}
+						}
+					],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "DECISION_CI",
+							"contributions": [
+								{
+									"value": "STANDARD",
+									"sources": ["Non_Medical_Limits"]
+								}
+							],
+							"min": {
+								"value": "STANDARD",
+								"sources": ["Non_Medical_Limits"]
+							},
+							"max": {
+								"value": "STANDARD",
+								"sources": ["Non_Medical_Limits"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				},
+				{
+					"name": "Set_Employment_Status",
+					"path": "Set_Employment_Status",
+					"alias": "Set Employment Status",
+					"isSatisfied": true,
+					"hasQuestions": true,
+					"isWrapUpLine": true,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Set Employment Status"],
+					"triggerQuestions": {},
+					"questions": [
+						{
+							"name": "OCCUPATION",
+							"path": "OCCUPATION",
+							"locale": "EN_US",
+							"hasAnswer": true,
+							"isSatisfied": true,
+							"triggeredLines": [],
+							"answers": ["Union Officer"],
+							"validationErrors": {},
+							"definition": {
+								"type": "OPTION_BACKED",
+								"name": "OCCUPATION",
+								"text": "What is your job?",
+								"helpText": "This needs to be your main job - in other words, the one you spend most time doing. If you can't find your exact job, try describing your job differently, or pick the closest match.",
+								"isMultiValued": false,
+								"tags": [],
+								"optionListName": "Occupations",
+								"includedCategories": [],
+								"excludedCategories": ["Unrecognised"],
+								"isStrict": true,
+								"minSearchChars": 3
+							}
+						}
+					],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "EMPLOYMENT_STATUS",
+							"contributions": [
+								{
+									"value": "EMPLOYED",
+									"sources": ["Set_Employment_Status"]
+								}
+							],
+							"min": {
+								"value": "EMPLOYED",
+								"sources": ["Set_Employment_Status"]
+							},
+							"max": {
+								"value": "EMPLOYED",
+								"sources": ["Set_Employment_Status"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				},
+				{
+					"name": "Set_Occupation_Class",
+					"path": "Set_Occupation_Class",
+					"alias": "Set Occupation Class",
+					"isSatisfied": true,
+					"hasQuestions": false,
+					"isWrapUpLine": true,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Set Occupation Class"],
+					"triggerQuestions": {},
+					"questions": [],
+					"buckets": [
+						{
+							"type": "NUMBER",
+							"name": "OCCUPATION_CLASS",
+							"contributions": [
+								{
+									"value": 4,
+									"sources": ["Set_Occupation_Class"]
+								}
+							],
+							"min": {
+								"value": 4,
+								"sources": ["Set_Occupation_Class"]
+							},
+							"max": {
+								"value": 4,
+								"sources": ["Set_Occupation_Class"]
+							},
+							"sum": {
+								"value": 4,
+								"sources": ["Set_Occupation_Class"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				},
+				{
+					"name": "EM_Rounding",
+					"path": "EM_Rounding",
+					"alias": "EM Rounding",
+					"isSatisfied": true,
+					"hasQuestions": false,
+					"isWrapUpLine": true,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["EM Rounding"],
+					"triggerQuestions": {},
+					"questions": [],
+					"buckets": [
+						{
+							"type": "NUMBER",
+							"name": "EM_CI",
+							"contributions": [
+								{
+									"value": 0,
+									"sources": ["Build", "CV_Risk_Calculator_CI", "EM_Rounding"]
+								}
+							],
+							"min": {
+								"value": 0,
+								"sources": ["Build", "CV_Risk_Calculator_CI", "EM_Rounding"]
+							},
+							"max": {
+								"value": 0,
+								"sources": ["Build", "CV_Risk_Calculator_CI", "EM_Rounding"]
+							},
+							"sum": {
+								"value": 0,
+								"sources": ["Build", "CV_Risk_Calculator_CI", "EM_Rounding"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				},
+				{
+					"name": "Non_Standard_Decisions",
+					"path": "Non_Standard_Decisions",
+					"alias": "Non Standard Decisions",
+					"isSatisfied": true,
+					"hasQuestions": false,
+					"isWrapUpLine": true,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Non Standard Decisions"],
+					"triggerQuestions": {},
+					"questions": [],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "DECISION_CI",
+							"contributions": [
+								{
+									"value": "NON_STANDARD",
+									"sources": ["Non_Standard_Decisions"]
+								}
+							],
+							"min": {
+								"value": "NON_STANDARD",
+								"sources": ["Non_Standard_Decisions"]
+							},
+							"max": {
+								"value": "NON_STANDARD",
+								"sources": ["Non_Standard_Decisions"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				},
+				{
+					"name": "Evidence_Required",
+					"path": "Evidence_Required",
+					"alias": "Evidence Required",
+					"isSatisfied": true,
+					"hasQuestions": false,
+					"isWrapUpLine": true,
+					"isGlobal": true,
+					"isRoot": false,
+					"isForced": false,
+					"tags": [],
+					"triggers": ["Evidence Required"],
+					"triggerQuestions": {},
+					"questions": [],
+					"buckets": [
+						{
+							"type": "OPTION",
+							"name": "CONSOLIDATED_EVIDENCE_CI",
+							"contributions": [
+								{
+									"value": "EO_SCRIPT_CHECK",
+									"sources": ["Evidence_Required", "Last2_Procedure", "Last5_Treatment"]
+								}
+							],
+							"min": {
+								"value": "EO_SCRIPT_CHECK",
+								"sources": ["Evidence_Required", "Last2_Procedure", "Last5_Treatment"]
+							},
+							"max": {
+								"value": "EO_SCRIPT_CHECK",
+								"sources": ["Evidence_Required", "Last2_Procedure", "Last5_Treatment"]
+							}
+						}
+					],
+					"staticallyTriggeredLines": []
+				}
+			]
 		}
 	],
 	"allAnswers": {
-		"BASKET_LIFE_COVER": ["10000"],
-		"BIRTHDATE": [],
-		"CITIZENSHIP": [],
-		"GENDER": [],
-		"HEIGHT_FEET": [],
-		"HEIGHT_INCHES": [],
-		"LAST_10_ALCOHOL": [],
-		"LAST_10_CANCER": [],
-		"LAST_10_CNS": [],
-		"LAST_10_DRIVING": [],
-		"LAST_10_DRUG_USE": [],
-		"LAST_10_ENDO": [],
-		"LAST_10_GITRACT": [],
-		"LAST_10_HEART": [],
-		"LAST_10_HIV": [],
-		"LAST_10_IMMUNE": [],
-		"LAST_10_MENTAL_HEALTH": [],
-		"LAST_10_RESPIRATORY": [],
-		"LAST_2_PROCEDURE": [],
-		"LAST_5_DRIVING": [],
-		"LAST_5_TREATMENT": [],
-		"MIB_PRESENT": [],
-		"PRODUCT": ["Life"],
-		"RX_PRESENT": [],
-		"SALES_CHANNEL": ["Direct"],
+		"BASKET_CI_COVER": ["23"],
+		"BIRTHDATE": ["12/12/2001"],
+		"CITIZENSHIP": ["Yes"],
+		"GENDER": ["Male"],
+		"HEIGHT_FEET": ["5"],
+		"HEIGHT_INCHES": ["5"],
+		"LAST_10_ALCOHOL": ["None of these"],
+		"LAST_10_CANCER": ["None of these"],
+		"LAST_10_CNS": ["Alzheimer's disease"],
+		"LAST_10_DRIVING": ["No"],
+		"LAST_10_DRUG_USE": ["Amphetamines"],
+		"LAST_10_ENDO": ["Diabetes or pre-diabetes"],
+		"LAST_10_GENITO_MALE": ["None of these"],
+		"LAST_10_GITRACT": ["None of these"],
+		"LAST_10_HEART": ["Uncontrolled hypertension"],
+		"LAST_10_HIV": ["None of these"],
+		"LAST_10_IMMUNE": ["Systemic lupus"],
+		"LAST_10_MENTAL_HEALTH": ["None of these"],
+		"LAST_10_RESPIRATORY": ["None of these"],
+		"LAST_2_PROCEDURE": ["Inpatient or outpatient diagnostic procedure"],
+		"LAST_5_DRIVING": ["No"],
+		"LAST_5_TREATMENT": ["Yes"],
+		"OCCUPATION": ["Union Officer"],
+		"PRODUCT": ["Critical Illness"],
 		"SOURCE": ["Initial application form"],
-		"TOBACCO": [],
-		"TOTAL_LIFE_COVER": ["10000"]
+		"TOBACCO": ["Yes"],
+		"WEIGHT_MALE": ["200"]
 	}
 }
