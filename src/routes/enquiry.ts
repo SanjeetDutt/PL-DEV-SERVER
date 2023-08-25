@@ -1,6 +1,6 @@
 import express, { NextFunction, Request, Response } from 'express';
 import { newEnquiry, getResponse, saveResponse } from '../data/enquiry/main';
-import {checkOrCreateFile} from "../util/CommonFunctions"
+import { checkOrCreateFile } from '../util/CommonFunctions';
 
 const router = express.Router();
 
@@ -10,7 +10,6 @@ export const CONSTANTS = {
 	BRANCH: 'PL',
 	TAG: 'PL'
 };
-
 
 checkOrCreateFile(CONSTANTS.ENQUIRY_FILE);
 checkOrCreateFile(CONSTANTS.QUESTION_FILE);
@@ -28,6 +27,16 @@ router.post('/startEnquiry', async (req: Request, res: Response, next: NextFunct
 
 // Call to create a new enquiry
 router.get('/enquiry/:enquiryId', async (req: Request<{ enquiryId: string }, {}, {}>, res: Response, next: NextFunction) => {
+	try {
+		const enquiryResponse = await getResponse(req.params.enquiryId);
+		res.status(200).json(enquiryResponse);
+	} catch (error) {
+		next(error);
+	}
+});
+
+// Call to create a new enquiry
+router.post('/closeEnquiry/:enquiryId', async (req: Request<{ enquiryId: string }, {}, {}>, res: Response, next: NextFunction) => {
 	try {
 		const enquiryResponse = await getResponse(req.params.enquiryId);
 		res.status(200).json(enquiryResponse);
