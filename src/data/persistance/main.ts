@@ -20,7 +20,7 @@ const getPersistanceById = async (id: string): Promise<Persistance | null> => {
 	return null;
 };
 
-const savePersistance = async (interviewId: string, persistance: Persistance) => {
+export const savePersistance = async (interviewId: string, persistance: Persistance) => {
 	const persistencies = await getAllPersistance();
 	persistencies[interviewId] = persistance;
 	await writeFile(CONSTANTS.PERSISTANCE_FILE, persistencies);

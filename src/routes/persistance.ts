@@ -1,7 +1,8 @@
 import express, { NextFunction, Request, Response } from 'express';
 import { checkOrCreateFile } from '../util/CommonFunctions';
-import { createNewInterviewId, createPersistance, fetchPersistance, PROGRESS_NAMES, persistanceUpdates } from '../data/persistance/main';
+import { createNewInterviewId, createPersistance, fetchPersistance, PROGRESS_NAMES, persistanceUpdates, savePersistance } from '../data/persistance/main';
 import { newEnquiry } from '../data/enquiry/main';
+import { Persistance } from '../data/persistance/structure';
 
 const router = express.Router();
 
@@ -34,6 +35,11 @@ router.get('/fetch/:interviewId', async (req: Request<{ interviewId: string }>, 
 	} catch (error) {
 		next(error);
 	}
+});
+
+router.post('/save/:interviewId', async (req: Request<{ interviewId: string }, {}, { data: Persistance }>, res: Response, next: NextFunction) => {
+	await savePersistance(req.params.interviewId, req.body.data);
+	res.status(200).json(req.body.data);
 });
 
 router.post('/update/:interviewId/:updateType', async (req: Request<{ interviewId: string; updateType: string }, {}, { value: string }>, res: Response, next: NextFunction) => {
