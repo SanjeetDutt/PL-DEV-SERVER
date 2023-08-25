@@ -102,7 +102,7 @@
 							"otherParty": [],
 							"beneficiaryGroup": [],
 							"producer": [],
-							"coverage": "coverage": [
+							"coverage": [
 								{
 									"coverageID": "20200539695145_1",
 									"groupPolicyNumber": "320098",
@@ -165,7 +165,7 @@
 									],
 									"coverageEventID": []
 								}
-							],,
+							],
 							"employeeForm": []
 						}
 					]
