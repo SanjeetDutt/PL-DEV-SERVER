@@ -102,7 +102,7 @@
 							"otherParty": [],
 							"beneficiaryGroup": [],
 							"producer": [],
-							"coverage": [
+							"coverage": "coverage": [
 								{
 									"coverageID": "20200539695145_1",
 									"groupPolicyNumber": "320098",
@@ -115,7 +115,38 @@
 									"benefitAmount": 1000,
 									"benefitEarningsEffectiveDate": "2019-01-01",
 									"electedCoverage": {
-										"electedBenefitAmount": 65000.0,
+										"electedBenefitAmount": 65000,
+										"electedCoverageInsured": [
+											{
+												"insuredPartyID": "71674:999",
+												"primaryInsuredIndicator": true,
+												"insuredCoverageEffectiveDate": "2022-12-31"
+											}
+										],
+										"electedCoverageRider": []
+									},
+									"coverageInsured": [
+										{
+											"insuredPartyID": "71674:999",
+											"primaryInsuredIndicator": true,
+											"insuredCoverageEffectiveDate": "2022-12-31"
+										}
+									],
+									"coverageEventID": []
+								},
+								{
+									"coverageID": "20200539695145_1",
+									"groupPolicyNumber": "320098",
+									"productTypeCode": "Life",
+									"benefitPlanIdentifier": "BL",
+									"benefitClassIdentifier": "001",
+									"originalCoverageEffectiveDate": "2021-01-01",
+									"coverageEffectiveDate": "2022-12-31",
+									"coverageTierCode": "Employee",
+									"benefitAmount": 10000,
+									"benefitEarningsEffectiveDate": "2019-01-01",
+									"electedCoverage": {
+										"electedBenefitAmount": 100000,
 										"electedCoverageInsured": [
 											{
 												"insuredPartyID": "71674:999",
@@ -134,7 +165,7 @@
 									],
 									"coverageEventID": []
 								}
-							],
+							],,
 							"employeeForm": []
 						}
 					]
