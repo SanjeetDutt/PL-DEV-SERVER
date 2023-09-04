@@ -191,7 +191,7 @@
 	},
 	"6d91c749-cd86-4d6a-a35f-8ba10d4888b5": {
 		"benAdminID": "1",
-		"entityType": "Employee",
+		"entityType": "Spouse",
 		"dependent": [
 			{
 				"dependentEoiID": "",

@@ -3,7 +3,7 @@ import Enquiry from '../enquiry/structure';
 export class Persistance {
 	benAdminID: string = '1'; // might be eoiID
 	interviewID: string;
-	entityType: string = 'Employee';
+	entityType: "Employee" | "Spouse" = 'Employee';
 	dependent: Dependent[] = [new Dependent()];
 	interviewStatus: InterviewStatus = new InterviewStatus();
 	corrections: {

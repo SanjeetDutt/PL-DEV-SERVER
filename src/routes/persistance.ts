@@ -42,6 +42,23 @@ router.post('/save/:interviewId', async (req: Request<{ interviewId: string }, {
 	res.status(200).json(req.body.data);
 });
 
+router.get('/spouse/:employeeId', async (req: Request<{ employeeId: string }>, res: Response, next: NextFunction) => {
+	try {
+		const persistance = await fetchPersistance(req.params.employeeId);
+		if (!persistance) {
+			res.status(500).json({ error: 'invalid interview id' });
+			return;
+		} else {
+			const spouseInterviewId = persistance.dependent[0].dependentInterviewID;
+			const spousePersistance = await fetchPersistance(spouseInterviewId);
+			res.status(200).json(spousePersistance);
+		}
+	} catch (error) {
+		next(error);
+	}
+});
+
+/// DEPRECIATED
 router.post('/update/:interviewId/:updateType', async (req: Request<{ interviewId: string; updateType: string }, {}, { value: string }>, res: Response, next: NextFunction) => {
 	try {
 		let persistance = await fetchPersistance(req.params.interviewId);
