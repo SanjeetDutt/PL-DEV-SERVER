@@ -16,3 +16,10 @@ export const readFile = async (fileName: string) => {
 export const writeFile = async (fileName: string, data: object) => {
 	await fs.writeFile(fileName, JSON.stringify(data));
 };
+
+export const getUniqueNumber = () => {
+	const max = new Date();
+	const min = new Date(2023, 0, 1);
+
+	return (Math.random() * (max.getTime() - min.getTime())).toFixed(0);
+};
