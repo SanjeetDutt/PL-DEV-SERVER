@@ -5,8 +5,6 @@ import { saveUnderWriter, getAllUnderwritters } from '../../data/workbench/under
 const router = Router();
 
 const parseUnderWriter = (underwriter: Underwriter) => {
-	console.log(underwriter);
-
 	return {
 		id: underwriter.id,
 		fullName: underwriter.getFullName()

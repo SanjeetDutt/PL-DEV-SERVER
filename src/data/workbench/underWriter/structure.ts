@@ -6,8 +6,6 @@ export class Underwriter extends Person {
 	}
 
 	getFullName(): string {
-		console.log(super.getFullName);
-
 		return super.getFullName();
 	}
 }
